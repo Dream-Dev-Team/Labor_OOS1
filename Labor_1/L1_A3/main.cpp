@@ -33,7 +33,7 @@ char labyrinth[kZeilen][kSpalten + 2];
 void initialisieren() {
 	
 	
-	for (int i = 0; i < kZeilen; ++i) {
+	for (int i = 0; i < kZeilen; ++i) {												//Erstelllen des Labyrinths
 		for (int j = 0; j < kSpalten+2; ++j) {
 			if (j == 11) {
 				labyrinth[i][j] = '\n';
@@ -53,7 +53,7 @@ void initialisieren() {
 // Labyrinth auf dem Bildschirm ausgeben
 void drucken() {
 	// Console frei machen
-	system("cls");
+	system("cls");																	//Zeilenweise Ausgabe
 	// Labyrinth ausgeben
 	for (int i = 0; i < kZeilen;++i) {
 		cout << labyrinth[i];

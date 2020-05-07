@@ -14,8 +14,8 @@ void ausgabe(int[], int);
 int main()
 {
 	int length;
-	cout << "Wie viele Zahlen m\x94 \bchten Sie einlesen?" << endl;
-	cin >> length;
+	cout << "Wie viele Zahlen m\x94 \bchten Sie einlesen?" << endl;									//Erstellen des Arrays mit dynamischer Speicherallokation
+	cin >> length;																					//+überprüfen des Arrays
 	int * array = new int[length];
 	if (array == NULL){
 		cerr << "Fehler beim Erstellen eines Arrays";
@@ -23,6 +23,8 @@ int main()
 	}
 	eingabe(array, length);
 	ausgabe(array, length);
+	delete(array);																					//Löschen des Arrays am Ende der Funktion
+	return 0;
 }
 
 void eingabe(int array[], int length) {
