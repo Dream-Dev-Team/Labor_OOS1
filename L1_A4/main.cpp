@@ -50,7 +50,7 @@ char* enterName(char str[])
 
 
 
-
+	return NULL;
 }
 
 // Den Computer zufällig waehlen lassen. 
@@ -59,7 +59,7 @@ objectType randomChoice()
 {
 
 
-
+	return  STEIN;
 
 }
 
@@ -72,7 +72,7 @@ char* object2str(objectType o)
 
 
 
-
+	return NULL;
 
 
 }
@@ -102,7 +102,7 @@ objectType enterChoice()
 
 
 
-
+	return STEIN;
 
 }
 
@@ -112,10 +112,10 @@ objectType winningObject(objectType obj1, objectType obj2)
 
 
 
+	return STEIN;
 
 
-
-}
+}	
 
 // Ausgeben, wer gewonnen hat
 void showWinner(player p1, player p2)
@@ -145,4 +145,5 @@ int main()
 	showPlayer(player1);
 	showPlayer(player2);
 	showWinner(player1, player2);
+	return NULL;
 }

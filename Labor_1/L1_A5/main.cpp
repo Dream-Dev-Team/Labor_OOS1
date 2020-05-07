@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 //////////////////////////////////////////////////////
 //Dateiname: 
@@ -9,7 +10,20 @@ using namespace std;
 //Letzte Modifikationen: 
 //////////////////////////////////////////////////////
 
+float trapezFlaeche(float a, float b,  float gamma, float c);
+void input();
 int main()
 {
+	input();
+
+}
+
+void input() {
+	char modus;
+	cout << "Geben Sie an, ob sie den Fl\x84 \bcheninhalt f\x81 \br ein (Q)uadrat, (R)echteck, (P)arallelogramm oder ein (T)rapez berechnen wollen. " << endl;
+	cin >> modus;
+	switch (modus)
+		case 'q':
+		case 'Q':
 
 }
