@@ -16,12 +16,12 @@ int main() {
 	double d = 1.234;
 	cout << "Nr  Oct  Hex String  Fixed  Scientific " << endl;
 	for (int k = 1; k < 11; k++) {
-		cout << dec << k << " ";
-		cout << oct << k << " ";
-		cout << "0x" << uppercase << hex << k;
-		cout << setfill('*') << string(k % 5 + 1, '*') << " ";
-		cout << setprecision(3) << fixed << d << " ";
-		cout << uppercase << scientific << d;
+		cout << setw(3) << dec << k << " ";
+		cout << setw(3) << oct << k << " ";
+		cout << setw(3) << "0x" << uppercase << hex << k << " ";
+		cout << setfill('+') << setw(7) << string(k % 5 + 1, '*') << " ";
+		cout << setfill(' ') << showpos << setw(8) << setprecision(3) << fixed << d << " ";
+		cout << noshowpos << setw(10) << uppercase << scientific << d;
 		d = d * -2;
 		cout << endl;
 	}
