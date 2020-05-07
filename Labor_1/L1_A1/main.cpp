@@ -3,11 +3,11 @@
 #include <iomanip>
 using namespace std;
 //////////////////////////////////////////////////////
-//Dateiname: 
+//Dateiname: Labor1_Aufgabe1 
 //Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
 //Enthaltene Module: 
-//Entwicklungsbeginn: xx.xx.xx		Entwicklungsende: xx.xx.xx
-//Zeitaufwand gesamt: 
+//Entwicklungsbeginn: 07.05.2020		Entwicklungsende: 07.05.2020
+//Zeitaufwand gesamt: 0 
 //Letzte Modifikationen: 
 //////////////////////////////////////////////////////
 

@@ -5,7 +5,7 @@
 using namespace std;
 //////////////////////////////////////////////////////
 //Dateiname: 
-//Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron MÃ¼ller (aamuit00@hs-esslingen.de)
+//Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
 //Enthaltene Module: 
 //Entwicklungsbeginn: xx.xx.xx		Entwicklungsende: xx.xx.xx
 //Zeitaufwand gesamt: 
@@ -20,40 +20,40 @@ Spiel Tsching, Tschang, Tschong
 Regeln:
 Es gibt zwei Spieler: der Programmierer und der Computer.
 Beide Spieler waehlen gleichzeitig eines der drei Objekte
-Stein, Schere und Papier. Beide kÃ¶nnen das gleiche Objekt wÃ¤hlen.
-Der Spieler, der das mÃ¤chtigere Objekt gewÃ¤hlt hat gewinnt.
+Stein, Schere und Papier. Beide können das gleiche Objekt wählen.
+Der Spieler, der das mächtigere Objekt gewählt hat gewinnt.
 SCHERE kann einen STEIN nicht zerschneiden, d.h. STEIN ist
-mÃ¤chtiger als SCHERE. PAPIER wickelt STEIN ein, d.h. PAPIER ist
-mÃ¤chtiger als STEIN. SCHERE zerschneidet PAPIER, d. h. SCHERE
+mächtiger als SCHERE. PAPIER wickelt STEIN ein, d.h. PAPIER ist
+mächtiger als STEIN. SCHERE zerschneidet PAPIER, d. h. SCHERE
 ist maechtiger als PAPIER
 
 */
 
 
-// AufzÃ¤hlungstyp fÃ¼r Stein etc.
+// Aufzählungstyp für Stein etc.
 enum objectType { STEIN, SCHERE, PAPIER };
 
-// Struktur fÃ¼r einen Spieler bestehend aus Name und Wahl 
+// Struktur für einen Spieler bestehend aus Name und Wahl 
 // des Spielers
 struct player {
-	char* name;
+	const char* name;
 	objectType choice;
 };
 
-// Variable fÃ¼r den Namen des Spielers 
+// Variable für den Namen des Spielers 
 char name[15];
 
 // Name des Spielers eingeben
 char* enterName(char str[])
 {
-
+	cin >> str;
 
 
 
 
 }
 
-// Den Computer zufÃ¤llig waehlen lassen. 
+// Den Computer zufällig waehlen lassen. 
 // Nutzen Sie srand(...) und rand().
 objectType randomChoice()
 {
@@ -63,7 +63,7 @@ objectType randomChoice()
 
 }
 
-// Die Wahl von STEIN etc. als String zurÃ¼ckgeben lassen
+// Die Wahl von STEIN etc. als String zurückgeben lassen
 char* object2str(objectType o)
 {
 
