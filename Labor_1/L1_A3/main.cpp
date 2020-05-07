@@ -4,11 +4,11 @@
 //          daher abhängig vom Compiler
 using namespace std;
 //////////////////////////////////////////////////////
-//Dateiname: 
+//Dateiname: Labor_1_Aufgabe_3
 //Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
-//Enthaltene Module: 
-//Entwicklungsbeginn: xx.xx.xx		Entwicklungsende: xx.xx.xx
-//Zeitaufwand gesamt: 
+//Enthaltene Module: -
+//Entwicklungsbeginn: 07.05.20		Entwicklungsende: 07.05.20
+//Zeitaufwand gesamt: 30 min
 //Letzte Modifikationen: 
 //////////////////////////////////////////////////////
 
@@ -31,15 +31,22 @@ char labyrinth[kZeilen][kSpalten + 2];
 
 // Labyrinth mit # füllen
 void initialisieren() {
-	/* HIER */
+	
+	
+	for (int i = 0; i < kZeilen; ++i) {
+		for (int j = 0; j < kSpalten+2; ++j) {
+			if (j == 11) {
+				labyrinth[i][j] = '\n';
+			}
+			else if (j == 12) {
+				labyrinth[i][j] = '\0';
+			}
+			else {
+				labyrinth[i][j] = '#';
+			}
+		}
 
-
-
-
-
-
-
-
+	}
 
 }
 
@@ -48,7 +55,10 @@ void drucken() {
 	// Console frei machen
 	system("cls");
 	// Labyrinth ausgeben
-	/* HIER */
+	for (int i = 0; i < kZeilen;++i) {
+		cout << labyrinth[i];
+
+	}
 
 
 
