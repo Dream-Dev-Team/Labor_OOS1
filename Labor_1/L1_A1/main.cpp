@@ -7,7 +7,7 @@ using namespace std;
 //Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
 //Enthaltene Module: 
 //Entwicklungsbeginn: 07.05.2020		Entwicklungsende: 07.05.2020
-//Zeitaufwand gesamt: 0 
+//Zeitaufwand gesamt: 20min  
 //Letzte Modifikationen: 
 //////////////////////////////////////////////////////
 
