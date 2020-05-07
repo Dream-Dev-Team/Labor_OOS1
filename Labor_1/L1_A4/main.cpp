@@ -14,6 +14,7 @@ using namespace std;
 
 /*
 
+
 Spiel Tsching, Tschang, Tschong
 
 Regeln:

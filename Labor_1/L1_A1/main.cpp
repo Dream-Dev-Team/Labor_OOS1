@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <iomanip>
 using namespace std;
 //////////////////////////////////////////////////////
 //Dateiname: 
@@ -9,7 +11,19 @@ using namespace std;
 //Letzte Modifikationen: 
 //////////////////////////////////////////////////////
 
-int main()
-{
 
+int main() {
+	double d = 1.234;
+	cout << "Nr  Oct  Hex String  Fixed  Scientific " << endl;
+	for (int k = 1; k < 11; k++) {
+		cout << dec << k << " ";
+		cout << oct << k << " ";
+		cout << "0x" << uppercase << hex << k;
+		cout << setfill('*') << string(k % 5 + 1, '*') << " ";
+		cout << setprecision(3) << fixed << d << " ";
+		cout << uppercase << scientific << d;
+		d = d * -2;
+		cout << endl;
+	}
+	return 0;
 }
