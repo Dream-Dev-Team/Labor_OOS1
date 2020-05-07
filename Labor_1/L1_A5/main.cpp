@@ -11,16 +11,16 @@ using namespace std;
 //Letzte Modifikationen: 
 //////////////////////////////////////////////////////
 
-float trapezFlaeche(float a, float b = 0, float gamma = 90, float c = 0) {
+float trapezFlaeche(float a, float b = 0, float gamma = 90, float c = 0) {								//Funktionsprototypen funktionieren mit Default-Parametern nicht
 	float flaeche;
-	if (b == 0) {
+	if (b == 0) {																						//Parameter mit eingegebenen Werten füllen 
 		b = a;
 		c = a;
 	}
 	else if (c == 0) {
 		c = a;
 	}
-	gamma *= PI;
+	gamma *= PI;																						//Grad zu Bogenmaß
 	gamma /= 180;
 	flaeche = 0.5 * (a + c) * b * sin(gamma);
 	return flaeche;
@@ -30,14 +30,14 @@ float input();
 void output(float);
 
 
-int main()
+int main()																								//main mit Aufruf von inp. / outp.
 {
 	output(input());
 
 }
 
-float input() {
-	char modus;
+float input() {																							//Input-Funktion: Frage nach Modus + zugehörigen Parameter,
+	char modus;																							//Aufruf der Rechenfunktion
 	float a;
 	float b;
 	float c;
@@ -81,7 +81,7 @@ float input() {
 		cin >> gamma;
 		cout << "Geben Sie die Seitenl\x84 \bnge 'c' an: \n";
 		cin >> c;
-		flaeche = trapezFlaeche(a, b, gamma, c);
+		flaeche = trapezFlaeche(a, b, gamma, c);														//Fehlerausgabe bei falschem Input
 		break;
 	default : 
 		cerr << "\n#####\n"<<"Fehler bei der Eingabe! Geben Sie nur einen der Buchstaben Q (Quadrat), R (Rechteck), P (Parallelogramm) oder T (Trapez) ein !\n"<<"#####\n\n";
@@ -92,7 +92,7 @@ float input() {
 
 
 
-void output(float f) {
+void output(float f) {																					//Funktion für Ausgabe
 	cout << "Der Fl\x84 \bcheninhalt des Trapez ist: " << f;
 	return;
 }
