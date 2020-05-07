@@ -45,9 +45,7 @@ void initialisieren() {
 				labyrinth[i][j] = '#';
 			}
 		}
-
 	}
-
 }
 
 // Labyrinth auf dem Bildschirm ausgeben
@@ -57,13 +55,7 @@ void drucken() {
 	// Labyrinth ausgeben
 	for (int i = 0; i < kZeilen;++i) {
 		cout << labyrinth[i];
-
 	}
-
-
-
-
-
 }
 
 // Hilfsfunktion max

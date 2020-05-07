@@ -18,9 +18,9 @@ int main() {
 	for (int k = 1; k < 11; k++) {
 		cout << setw(3) << dec << k << " ";
 		cout << setw(3) << oct << k << " ";
-		cout << setw(3) << "0x" << uppercase << hex << k << " ";
+		cout << setw(3) << "0x" << uppercase << hex << k << " ";						//hex liefert ausgabe ohne den 0x Teil aus der Aufgabenstellung
 		cout << setfill('+') << setw(7) << string(k % 5 + 1, '*') << " ";
-		cout << setfill(' ') << showpos << setw(8) << setprecision(3) << fixed << d << " ";
+		cout << setfill(' ') << showpos << setw(8) << setprecision(3) << fixed << d << " ";		//setfill zurücksetzen auf space
 		cout << noshowpos << setw(10) << uppercase << scientific << d;
 		d = d * -2;
 		cout << endl;

@@ -42,7 +42,7 @@ float input() {																							//Input-Funktion: Frage nach Modus + zugeh
 	float b;
 	float c;
 	float gamma;
-	float flaeche=0;
+	float flaeche = 0;
 
 	cout << "Geben Sie an, ob sie den Fl\x84 \bcheninhalt f\x81 \br ein (Q)uadrat, (R)echteck, (P)arallelogramm oder ein (T)rapez berechnen wollen. " << endl;
 	cin >> modus;
@@ -81,13 +81,9 @@ float input() {																							//Input-Funktion: Frage nach Modus + zugeh
 		cin >> gamma;
 		cout << "Geben Sie die Seitenl\x84 \bnge 'c' an: \n";
 		cin >> c;
-		flaeche = trapezFlaeche(a, b, gamma, c);														//Fehlerausgabe bei falschem Input
-		break;
-	default : 
-		cerr << "\n#####\n"<<"Fehler bei der Eingabe! Geben Sie nur einen der Buchstaben Q (Quadrat), R (Rechteck), P (Parallelogramm) oder T (Trapez) ein !\n"<<"#####\n\n";
-		input();
+		flaeche = trapezFlaeche(a, b, gamma, c);
+		return flaeche;
 	}
-	return flaeche;
 }
 
 

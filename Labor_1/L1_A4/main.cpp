@@ -91,7 +91,7 @@ objectType enterChoice()
 	int playerChoiceIndex = 0;
 	cout << "Bitte Objektwahl eingeben(1 = Stein, 2 = Schere, 3 = Papier) : ";
 	cin >> playerChoiceIndex;
-	return objectType(--playerChoiceIndex); //index 0-2 => eingabe 1-3 => index = eingabe - 1
+	return objectType(--playerChoiceIndex); //Index 0-2 => Eingabe 1-3 => Index = Eingabe - 1
 }
 
 // Die Wahl bestimmen, die gewonnen hat
