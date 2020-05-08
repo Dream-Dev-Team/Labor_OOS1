@@ -9,7 +9,9 @@ using namespace std;
 //Enthaltene Module: -
 //Entwicklungsbeginn: 07.05.20		Entwicklungsende: 07.05.20
 //Zeitaufwand gesamt: 30 min
-//Letzte Modifikationen: 
+//Letzte Modifikationen:	Verion 1.0 08.05.20 
+//							-Interchanged for-loop for for-each-loop
+//							-Version sollte nun komplett mit der Aufgabenstellung übereinstimmen
 //////////////////////////////////////////////////////
 
 

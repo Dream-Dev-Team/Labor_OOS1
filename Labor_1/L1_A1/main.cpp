@@ -8,7 +8,9 @@ using namespace std;
 //Enthaltene Module: 
 //Entwicklungsbeginn: 07.05.2020		Entwicklungsende: 07.05.2020
 //Zeitaufwand gesamt: 20min  
-//Letzte Modifikationen: 
+//Letzte Modifikationen:	Verion 1.0 08.05.20 
+//							-Fixed formatting issues
+//							-Version sollte nun komplett mit der Aufgabenstellung übereinstimmen
 //////////////////////////////////////////////////////
 
 
@@ -20,7 +22,7 @@ int main() {
 		cout << setw(3) << oct << k << " ";
 		cout << setw(3) << "0x" << uppercase << hex << k << " ";						//hex liefert ausgabe ohne den 0x Teil aus der Aufgabenstellung
 		cout << setfill('+') << setw(7) << left<<string(k % 5 + 1, '*') << " ";
-		cout << setfill(' ') << showpos << setw(8) << internal<<setprecision(3) << fixed << d << " ";		//setfill zurücksetzen auf space
+		cout << setfill(' ') << showpos << setw(8) << internal << setprecision(3) << fixed << d << " ";		//setfill zurücksetzen auf space
 		cout << noshowpos << setw(10) << uppercase << scientific << d;
 		d = d * -2;
 		cout << endl;
