@@ -128,6 +128,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyString.h" />
+    <ClCompile Include="Labyrinth.cpp" />
+    <ClCompile Include="Position.cpp" />
+    <ClCompile Include="Quelle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Labyrinth.h" />
+    <ClInclude Include="Position.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

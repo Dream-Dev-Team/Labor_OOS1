@@ -18,7 +18,7 @@ int main()
 	cout << "Wie viele Zahlen m\x94 \bchten Sie einlesen?" << endl;									//Erstellen des Arrays mit dynamischer Speicherallokation
 	cin >> length;																					//+überprüfen der Länge/ des Arrays
 	if (length <= 0) {
-		cerr << "Die Länge des Arrays muss >0 sein";
+		cerr << "Die L\x84 \bnge des Arrays muss >0 sein";
 		return 1;
 	}
 	array = new int[length];
