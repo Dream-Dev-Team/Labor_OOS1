@@ -4,8 +4,10 @@
 class Labyrinth
 {
 private:
-	const static unsigned int kZeilen=11;							//SOMEONE ELSE FIX THIS
-	const static unsigned int kSpalten=11;
+	static const unsigned int kZeilen=11;							//
+	static const unsigned int kSpalten=11;
+	const unsigned int kAnzGeister = 3;
+
 	unsigned int LabZeilen;
 	unsigned int LabSpalten;
 	unsigned int LabAnzGeister;
