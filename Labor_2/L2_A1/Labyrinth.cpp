@@ -4,10 +4,6 @@
 #include <conio.h>
 using namespace std;
 
-const unsigned int xSpalten = 11;				//FUCK THIS IN PARTICULAR
-const unsigned int xZeilen = 11;
-const unsigned int kAnzGeister = 3;
-
 extern int max(int, int);
 extern int min(int, int);
 
@@ -60,9 +56,9 @@ void Labyrinth::erzeugen() {
 			// links
 		case 75: posx = max(1, posx - 1); break;
 			// rechts
-		case 77: posx = min(xSpalten - 2, posx + 1); break;								//xSpalten!!!
+		case 77: posx = min(kSpalten - 2, posx + 1); break;								
 			// unten
-		case 80: posy = min(xZeilen - 2, posy + 1); break;
+		case 80: posy = min(kZeilen - 2, posy + 1); break;
 			// q = quit
 		case 113: break;
 		}
@@ -106,7 +102,7 @@ char Labyrinth::getZeichenAnPos(Position pos) {
 };
 
 bool Labyrinth::istMuenzeAnPos(Position pos) {
-	if (this->lab[pos.posy][pos.posx] == ':')
+	if (getZeichenAnPos(pos) == ':')
 		return true;
 };
 
