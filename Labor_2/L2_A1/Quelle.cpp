@@ -8,26 +8,23 @@ using namespace std;
 #pragma once 
 
 int main() {
-	MyString a("Hello ");
-	MyString b("World!");
-	
-	
-	MyString c = a + b;
-	
-	c += b;
-
-	int size = a;
-	string str = a;
-
-	if(a[3] == b[3])
-		cout << c << a << b;
-
-	if(a > b)
-
-	if(a != b)
-
-	if(a <= b)
-	
+	const MyString cs("Ein konstanter String");
+	MyString s(cs);
+	s.assign(cs);
+	s.append(cs);
+	cout << cs.c_str() << endl;
+	cout << cs.size() << endl;
+	cout << cs.capacity() << endl;
+	cout << boolalpha << cs.empty() << endl;
+	s = cs + cs;
+	cout << (cs == cs) << endl;
+	s = cs;
+	cout << cs << endl;
+	s.at(1) = 'X';
+	s[2] = 'Y';
+	cout << s << endl;
+	return 0;
+}
 		
 	//...
 
@@ -46,4 +43,3 @@ int main() {
 	//lab2.drucken();
 
 	*/
-}

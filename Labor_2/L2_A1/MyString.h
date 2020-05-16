@@ -22,10 +22,12 @@ public:
 
 	//Kombiniert den linken Operanden mit dem rechten zu einem MyString
 	MyString operator+(const MyString& mStr);
+	MyString operator+(const MyString& mStr) const;
 	//Kombiniert den rechten Operanden auf den linken
 	const MyString& operator+=(const MyString& mStr2);
 	//Setzt den linken Operanden dem rechten Op gleich
 	const MyString& operator=(const MyString& mStr);
+	const MyString operator=(const MyString& mStr) const;
 	//Vergleicht beide Op's miteinander und gibt bei Gleichheit true zurück
 	friend bool operator==(MyString& mStr1, const MyString& mStr2);
 	//Vergleicht beide Op's miteinander und gibt bei Ungleichheit true zurück
@@ -57,16 +59,20 @@ public:
 	//Liefert einen Zeiger auf den im this - Objekt gespeicherten CString zurück.
 	//Über den Zeiger kann keine Manipulation am String vorgenommen werden.
 	const char* c_str();
+	const char* c_str() const;
 	//Gibt die Größe des MyStrings zurück.
 	unsigned int size();
+	unsigned int size() const;
 	//Gibt die Kapazität des MyStrings zurück.
 	unsigned int capacity();
+	unsigned int capacity() const;
 
 	//Setzt den String auf einen leeren String.
 	void clear();
 	//Prüft, ob ein String leer ist.
 	//Gibt true zurück, falls Strings leer ist.
 	bool empty();
+	bool empty() const;
 	//Gibt true zurück, wenn beide Operanden gleichwertig sind (Länge + Übereinstimmung(100%))
 	bool equal(const MyString& str);
 };

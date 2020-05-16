@@ -55,6 +55,12 @@ MyString MyString::operator+(const MyString& mStr2) {
 	return mStr1;
 }
 
+MyString MyString::operator+(const MyString& mStr2) const{
+	MyString mStr1(*this);
+	mStr1.append(mStr2);
+	return mStr1;
+}
+
 const MyString& MyString::operator+=(const MyString& mStr2) {
 	return this->append(mStr2);
 }
@@ -64,12 +70,19 @@ ostream& operator<<(ostream& stream, const MyString& mStr) {
 	return stream;
 }
 
-const MyString& MyString::operator=(const MyString& mStr)
-{
+const MyString& MyString::operator=(const MyString& mStr){
 	if (this != &mStr) {
 		this->assign(mStr);
 	}
 	return *this;
+}
+
+const MyString MyString::operator=(const MyString& mStr) const{
+	MyString mStrNew(*this);
+	if (this != &mStr) {
+		mStrNew = mStr; 
+	}
+	return mStrNew;
 }
 
 bool operator==(MyString& mStr1, const MyString& mStr2) {
@@ -133,11 +146,23 @@ const char* MyString::c_str() {
 	return this->strPtr;
 }
 
+const char* MyString::c_str() const{
+	return this->strPtr;
+}
+
 unsigned int MyString::size() {
 	return this->strSize;
 }
 
+unsigned int MyString::size() const{
+	return this->strSize;
+}
+
 unsigned int MyString::capacity() {
+	return this->strCapacity;
+}
+
+unsigned int MyString::capacity() const{
 	return this->strCapacity;
 }
 
@@ -155,6 +180,13 @@ void MyString::clear() {
 }
 
 bool MyString::empty() {
+	if (this->size() == 0)
+		return true;
+	else
+		return false;
+}
+
+bool MyString::empty() const{
 	if (this->size() == 0)
 		return true;
 	else
