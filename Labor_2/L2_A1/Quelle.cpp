@@ -1,8 +1,37 @@
 // Main für Hausaufgabe 2
+#include <iostream>
+#include <iomanip>
 #include "Labyrinth.h"
+#include "MyString.h"
+
+using namespace std;
 #pragma once 
 
 int main() {
+	MyString a("Hello ");
+	MyString b("World!");
+	
+	
+	MyString c = a + b;
+	
+	c += b;
+
+	int size = a;
+	string str = a;
+
+	if(a[3] == b[3])
+		cout << c << a << b;
+
+	if(a > b)
+
+	if(a != b)
+
+	if(a <= b)
+	
+		
+	//...
+
+	/*
 	Labyrinth lab;
 	lab.drucken();
 	lab.erzeugen();
@@ -15,4 +44,6 @@ int main() {
 	lab2.drucken();
 	//lab2.erzeugen();									//2zeilen test
 	//lab2.drucken();
+
+	*/
 }
