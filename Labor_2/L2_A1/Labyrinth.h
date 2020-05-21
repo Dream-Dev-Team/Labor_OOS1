@@ -4,7 +4,7 @@
 class Labyrinth
 {
 private:
-	static const unsigned int kZeilen=11;							//
+	static const unsigned int kZeilen=11;							
 	static const unsigned int kSpalten=11;
 	const unsigned int kAnzGeister = 3;
 

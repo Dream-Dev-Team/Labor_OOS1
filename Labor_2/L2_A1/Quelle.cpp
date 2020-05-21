@@ -20,8 +20,8 @@ int main() {
 	cout << (cs == cs) << endl;
 	s = cs;
 	cout << cs << endl;
-	s.at(1) = 'X';
-	s[2] = 'Y';
+	s.at(1) = 'X';				//Es muss noch at()/[] angepasst werden das const MyString an diesen Stellen nicht geändert werden kann.
+	s[2] = 'Y';					//
 	cout << s << endl;
 	return 0;
 }
