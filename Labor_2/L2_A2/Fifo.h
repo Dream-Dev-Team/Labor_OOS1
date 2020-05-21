@@ -6,7 +6,7 @@ class Fifo
 	char* ptr;
 	int wPos;
 	int rPos;
-
+	int loops;
 
 public:
 	Fifo();
@@ -16,5 +16,8 @@ public:
 	int getRPos();
 	bool isEmpty();
 	bool isFull();
+
+	int push(char input);
+	char pop();
 };
 
