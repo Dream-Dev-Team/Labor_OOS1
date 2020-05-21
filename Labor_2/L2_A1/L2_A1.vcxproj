@@ -125,12 +125,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="MyString.cpp" />
+    <ClCompile Include="PacMan.cpp" />
+    <ClCompile Include="Spieler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyString.h" />
     <ClCompile Include="Labyrinth.cpp" />
     <ClCompile Include="Position.cpp" />
     <ClCompile Include="Quelle.cpp" />
+    <ClInclude Include="PacMan.h" />
+    <ClInclude Include="Spieler.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Labyrinth.h" />

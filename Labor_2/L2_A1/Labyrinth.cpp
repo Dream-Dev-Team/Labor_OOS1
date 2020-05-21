@@ -89,7 +89,7 @@ void Labyrinth::legeMuenzen() {
 };
 
 void Labyrinth::zeichneChar(char c, Position pos) {
-	this->lab[pos.posy][pos.posx] = 'c';
+	this->lab[pos.posy][pos.posx] = c;
 };
 
 void Labyrinth::zeichneChar(char c, Position posalt, Position posneu) {

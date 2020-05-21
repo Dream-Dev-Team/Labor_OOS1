@@ -1,45 +1,24 @@
-// Main für Hausaufgabe 2
-#include <iostream>
-#include <iomanip>
+#include "PacMan.h"
 #include "Labyrinth.h"
-#include "MyString.h"
 
-using namespace std;
-#pragma once 
+const bool kErzeugen = false;
 
 int main() {
-	const MyString cs("Ein konstanter String");
-	MyString s(cs);
-	s.assign(cs);
-	s.append(cs);
-	cout << cs.c_str() << endl;
-	cout << cs.size() << endl;
-	cout << cs.capacity() << endl;
-	cout << boolalpha << cs.empty() << endl;
-	s = cs + cs;
-	cout << (cs == cs) << endl;
-	s = cs;
-	cout << cs << endl;
-	s.at(1) = 'X';
-	s[2] = 'Y';
-	cout << s << endl;
-	return 0;
-}
-		
-	//...
-
-	/*
 	Labyrinth lab;
-	lab.drucken();
-	lab.erzeugen();
-	lab.drucken();
-	lab.exportDatei("lab.txt");						
-	Labyrinth lab2;
-	lab2.importDatei("lab.txt");
-	lab2.drucken();
-	lab2.legeMuenzen();
-	lab2.drucken();
-	//lab2.erzeugen();									//2zeilen test
-	//lab2.drucken();
+	if (kErzeugen) {
+		lab.erzeugen();
+		lab.exportDatei("lab.txt");
+	}
+	else {
+		lab.importDatei("lab.txt");
+		lab.legeMuenzen();
+		Spieler s("Demo");
+		Spieler g[kAnzGeister] = { Spieler("Geist 1"),
+								   Spieler("Geist 2"),
+								   Spieler("Geist 3") };
+		PacMan pm(lab, s, g, kAnzGeister);
+		pm.spielen();
+	}
+}
 
-	*/
+
