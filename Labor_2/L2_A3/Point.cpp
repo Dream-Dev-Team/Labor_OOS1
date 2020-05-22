@@ -7,6 +7,11 @@ Point::Point() {
 	this->y = 0;
 }
 
+Point::Point(double x, double y) {
+	this->x = x;
+	this->y = y;
+}
+
 void Point::setX(double x){
 	this->x = x;
 }
