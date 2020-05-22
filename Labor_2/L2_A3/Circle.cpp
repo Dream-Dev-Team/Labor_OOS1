@@ -4,7 +4,7 @@ using namespace std;
 
 Circle::Circle() {
 	this->centre;
-	this->radius = 1;
+	this->radius = 0;
 }
 
 Circle::Circle(Point point) {

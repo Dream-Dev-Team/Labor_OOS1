@@ -6,7 +6,7 @@ Fifo::Fifo() {
 	this->rPos = 0;
 	this->wPos = 0;
 	this->loops = 0;
-	this->ptr = new char[20 + 1];
+	this->ptr = new char[this->maxSize + 1];
 	this->ptr[0] = '\0';
 }
 
