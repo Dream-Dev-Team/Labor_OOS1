@@ -7,7 +7,7 @@
 using namespace std;
 
 
-//Konstruktoren/Destruktoren:
+//Konstruktoren + Destruktor:
 
 MyString::MyString() {
 	this->strPtr = new char[1];
@@ -21,7 +21,7 @@ MyString::~MyString() {
 		delete[] this->strPtr;
 }
 
-MyString::MyString(string & str) {
+MyString::MyString(string& str) {
 	this->strPtr = new char[str.capacity()];
 	strcpy(this->strPtr, str.c_str());
 	this->strPtr[str.size()] = '\0';
@@ -47,7 +47,7 @@ MyString::MyString(const MyString& mStr) {
 
 
 
-//Operators:
+//Operatoren:
 
 MyString MyString::operator+(const MyString& mStr2) {
 	MyString mStr1(*this);
