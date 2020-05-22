@@ -64,6 +64,7 @@ void Labyrinth::erzeugen() {
 		}
 		this->lab[posy][posx] = 'X';
 	}
+	this->lab[posy][posx] = ' ';
 };
 unsigned int Labyrinth::getZeilen() {
 	return this->LabZeilen;
