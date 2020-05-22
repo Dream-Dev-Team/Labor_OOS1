@@ -38,7 +38,7 @@ void PacMan::schritt() {
 		// Anzahl der gesammelten Münzen des Spielers erhöhen
 		s->plusMuenze();
 		// Anzahl der vorhandenen Münzen reduzieren
-		muenzen--;
+		//muenzen--;										//!
 	}
 	// den getanen Schritt des Spielers einzeichnen
 	lab->zeichneChar(' ', postmp, s->getPos());
@@ -66,7 +66,7 @@ void PacMan::schritt() {
 			// Geister sammeln Münzen
 			if (lab->istMuenzeAnPos(g[i]->getPos())) {
 				// Anzahl der vorhandenen Münzen reduzieren
-				muenzen--;
+				muenzen--;										//!	
 			}
 			// Geist einzeichnen
 			lab->zeichneChar('G', g[i]->getPos());

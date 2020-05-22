@@ -1,5 +1,13 @@
 #include "PacMan.h"
 #include "Labyrinth.h"
+//////////////////////////////////////////////////////
+//Dateiname: Labor2_Aufgabe1
+//Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
+//Enthaltene Module: Labyrinth.h, MyString.h, PacMan.h, Position.h, Spieler.h
+//Entwicklungsbeginn: 21.05.20		Entwicklungsende: 22.05.20
+//Zeitaufwand gesamt: 3h
+//Letzte Modifikationen: 
+//////////////////////////////////////////////////////
 
 const bool kErzeugen = false;
 

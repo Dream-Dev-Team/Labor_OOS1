@@ -20,77 +20,77 @@ public:
 
 	//Operators:
 
-	//Kombiniert den linken Operanden mit dem rechten zu einem MyString
+		//Kombiniert den linken Operanden mit dem rechten zu einem MyString
 	MyString operator+(const MyString& mStr);
-	//Kombiniert den linken Operanden mit dem rechten zu einem MyString
+		//Kombiniert den linken Operanden mit dem rechten zu einem MyString
 	MyString operator+(const MyString& mStr) const;
 
-	//Kombiniert den rechten Operanden auf den linken
+		//Kombiniert den rechten Operanden auf den linken
 	const MyString& operator+=(const MyString& mStr2);
 
-	//Setzt den linken Operanden dem rechten Op gleich
+		//Setzt den linken Operanden dem rechten Op gleich
 	const MyString& operator=(const MyString& mStr);
-	//Setzt den linken Operanden dem rechten Op gleich
+		//Setzt den linken Operanden dem rechten Op gleich
 	const MyString operator=(const MyString& mStr) const;
 
-	//Vergleicht beide Op's miteinander und gibt bei Gleichheit true zurück
+		//Vergleicht beide Op's miteinander und gibt bei Gleichheit true zurück
 	friend bool operator==(MyString& mStr1, const MyString& mStr2);
-	//Vergleicht beide Op's miteinander und gibt bei Ungleichheit true zurück
+		//Vergleicht beide Op's miteinander und gibt bei Ungleichheit true zurück
 	friend bool operator!=(MyString& mStr1, const MyString& mStr2);
 	
-	//Stream Integration
+		//Stream Integration
 	friend ostream& operator<<(ostream& stream, const MyString& mStr);
 	
-	//Gibt eine Refernz des chars an Indexstelle i zurück
+		//Gibt eine Refernz des chars an Indexstelle i zurück
 	char& operator[](std::size_t i);
 	
-	//MyString -> string Umwandlung
+		//MyString -> string Umwandlung
 	operator string() const const;
-	//MyString -> int Umwandlung [strSize -> int]
+		//MyString -> int Umwandlung [strSize -> int]
 	operator int() const const;
 
 
 	//Methoden:
 
-	//Vergrößert den Speicherplatz des dynamischen Arrays auf den übergebenen Wert c.
-	//Wenn die aktuelle Kapazität größer als der Wert c ist, wird nichts getan.
+		//Vergrößert den Speicherplatz des dynamischen Arrays auf den übergebenen Wert c.
+		//Wenn die aktuelle Kapazität größer als der Wert c ist, wird nichts getan.
 	void reserve(unsigned int c);
-	//Hängt str an das thisObjekt hinten an.
+		//Hängt str an das thisObjekt hinten an.
 	MyString& append(const MyString& str);
-	//Weist den String str dem this - Objekt zu. Ein evtl.vorher vorhandener String im this - Objekt wird überschrieben.
+		//Weist den String str dem this - Objekt zu. Ein evtl.vorher vorhandener String im this - Objekt wird überschrieben.
 	MyString& assign(const MyString& str);
-	//Greift auf das i - te Zeichen eines Strings zurück und kann dieses auch verändern.
-	//Sollte at(i) versuchen, außerhalb des Strings zuzugreifen, liefert at(i) das Nullzeichen
+		//Greift auf das i - te Zeichen eines Strings zurück und kann dieses auch verändern.
+		//Sollte at(i) versuchen, außerhalb des Strings zuzugreifen, liefert at(i) das Nullzeichen
 	char& at(unsigned int i);
 	
-	//Liefert einen Zeiger auf den im this - Objekt gespeicherten CString zurück.
-	//Über den Zeiger kann keine Manipulation am String vorgenommen werden.
+		//Liefert einen Zeiger auf den im this - Objekt gespeicherten CString zurück.
+		//Über den Zeiger kann keine Manipulation am String vorgenommen werden.
 	const char* c_str();
-	//Liefert einen Zeiger auf den im this - Objekt gespeicherten CString zurück.
-	//Über den Zeiger kann keine Manipulation am String vorgenommen werden.
+		//Liefert einen Zeiger auf den im this - Objekt gespeicherten CString zurück.
+		//Über den Zeiger kann keine Manipulation am String vorgenommen werden.
 	const char* c_str() const;
 
-	//Gibt die Größe des MyStrings zurück.
+		//Gibt die Größe des MyStrings zurück.
 	unsigned int size();
-	//Gibt die Größe des MyStrings zurück.
+		//Gibt die Größe des MyStrings zurück.
 	unsigned int size() const;
 
-	//Gibt die Kapazität des MyStrings zurück.
+		//Gibt die Kapazität des MyStrings zurück.
 	unsigned int capacity();
-	//Gibt die Kapazität des MyStrings zurück.
+		//Gibt die Kapazität des MyStrings zurück.
 	unsigned int capacity() const;
 
-	//Setzt den String auf einen leeren String.
+		//Setzt den String auf einen leeren String.
 	void clear();
 
-	//Prüft, ob ein String leer ist.
-	//Gibt true zurück, falls Strings leer ist.
+		//Prüft, ob ein String leer ist.
+		//Gibt true zurück, falls Strings leer ist.
 	bool empty();
-	//Prüft, ob ein String leer ist.
-	//Gibt true zurück, falls Strings leer ist.
+		//Prüft, ob ein String leer ist.
+		//Gibt true zurück, falls Strings leer ist.
 	bool empty() const;
 	
-	//Gibt true zurück, wenn beide Operanden gleichwertig sind (Länge + Übereinstimmung(100%))
+		//Gibt true zurück, wenn beide Operanden gleichwertig sind (Länge + Übereinstimmung(100%))
 	bool equal(const MyString& str);
 };
 

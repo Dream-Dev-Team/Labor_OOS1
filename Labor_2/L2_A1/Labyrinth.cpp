@@ -7,7 +7,7 @@ using namespace std;
 extern int max(int, int);
 extern int min(int, int);
 
-Labyrinth::Labyrinth() {
+Labyrinth::Labyrinth() {														//Std Construktor
 	this->muenzen = 0;
 	this->LabZeilen = kZeilen;
 	this->LabSpalten = kSpalten;
@@ -40,25 +40,25 @@ void Labyrinth::drucken() {
 };
 void Labyrinth::erzeugen() {
 
-	char c = 'x';
+	char c = 'x';																	//Spieler an Mittelpunkt des Labyrinths
 	int posx = kSpalten / 2;
 	int posy = kZeilen / 2;
 	this->lab[posy][posx] = 'X';
 	drucken();
 	while (c != 'q') {
 		drucken();
-		cout << "Laufen mit Pfeiltasten. Beenden mit q." << endl;
+		cout << "Laufen mit WASD. Beenden mit q." << endl;
 		this->lab[posy][posx] = ' ';
 		c = _getch();
 		switch (int(c)) {
 			// oben
-		case 72: posy = max(1, posy - 1); break;
+		case 'w': posy = max(1, posy - 1); break;
 			// links
-		case 75: posx = max(1, posx - 1); break;
+		case 'a': posx = max(1, posx - 1); break;
 			// rechts
-		case 77: posx = min(kSpalten - 2, posx + 1); break;								
+		case 'd': posx = min(kSpalten - 2, posx + 1); break;								
 			// unten
-		case 80: posy = min(kZeilen - 2, posy + 1); break;
+		case 's': posy = min(kZeilen - 2, posy + 1); break;
 			// q = quit
 		case 113: break;
 		}
@@ -88,11 +88,11 @@ void Labyrinth::legeMuenzen() {
 	}
 };
 
-void Labyrinth::zeichneChar(char c, Position pos) {
+void Labyrinth::zeichneChar(char c, Position pos) {														//Neue Zeichen setzen
 	this->lab[pos.posy][pos.posx] = c;
 };
 
-void Labyrinth::zeichneChar(char c, Position posalt, Position posneu) {
+void Labyrinth::zeichneChar(char c, Position posalt, Position posneu) {									//Zeichen 'bewegen'
 	this->zeichneChar(c, posneu);
 	this->lab[posalt.posy][posalt.posx] = ' ';
 };
