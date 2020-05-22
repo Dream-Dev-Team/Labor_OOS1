@@ -1,12 +1,12 @@
 #pragma once
 class Fifo
 {
-	int maxSize;
-	int number;
-	char* ptr;
-	int wPos;
-	int rPos;
-	int loops;
+	int maxSize;		//max Datenelemente in Speicher
+	int number;			//momentan gespeicherte Elemente
+	char* ptr;			//Zeiger auf Array
+	int wPos;			//Position des nächsten Schreibens
+	int rPos;			//Position des nächsten Lesens
+	int loops;			//
 
 public:
 	Fifo();

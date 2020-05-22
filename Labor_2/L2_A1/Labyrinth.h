@@ -1,13 +1,12 @@
 #pragma once
 #include "Position.h"
+static const unsigned int kZeilen = 11;									//globale Variablen
+static const unsigned int kSpalten = 11;
+static const unsigned int kAnzGeister = 3;
 
 class Labyrinth
 {
 private:
-	static const unsigned int kZeilen=11;							
-	static const unsigned int kSpalten=11;
-	const unsigned int kAnzGeister = 3;
-
 	unsigned int LabZeilen;
 	unsigned int LabSpalten;
 	unsigned int LabAnzGeister;

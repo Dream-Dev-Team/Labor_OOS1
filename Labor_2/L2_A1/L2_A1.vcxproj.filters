@@ -24,12 +24,24 @@
     <ClCompile Include="Position.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Spieler.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="PacMan.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Labyrinth.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Position.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Spieler.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="PacMan.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

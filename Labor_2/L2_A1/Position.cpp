@@ -49,6 +49,6 @@ Position& Position::schritt(Labyrinth& lab, int mode) {
 // Zwei Positionen vergleichen, 
 // liefert true, wenn x und y gleich
 bool Position::istGleichZu(Position& p) {
-	return (posx == p.posx && posy == p.posy);
+	return (this->posx == p.posx && this->posy == p.posy);
 }
 
