@@ -38,7 +38,7 @@ void PacMan::schritt() {
 		// Anzahl der gesammelten Münzen des Spielers erhöhen
 		s->plusMuenze();
 		// Anzahl der vorhandenen Münzen reduzieren
-		//muenzen--;										//!
+		muenzen--;
 	}
 	// den getanen Schritt des Spielers einzeichnen
 	lab->zeichneChar(' ', postmp, s->getPos());
@@ -66,7 +66,7 @@ void PacMan::schritt() {
 			// Geister sammeln Münzen
 			if (lab->istMuenzeAnPos(g[i]->getPos())) {
 				// Anzahl der vorhandenen Münzen reduzieren
-				muenzen--;										//!	
+				muenzen--;
 			}
 			// Geist einzeichnen
 			lab->zeichneChar('G', g[i]->getPos());
@@ -88,7 +88,7 @@ void PacMan::spielen() {
 	bool cond = (muenzen > 1);
 	while (cond) {
 		// Eine Weile warten (Windows)
-		Sleep(700);
+		Sleep(400);
 		// Eine Weile warten (C++11)
 		// std::this_thread::sleep_for(std::chrono::milliseconds(700));
 		if (_kbhit()) { // wenn Taste gedrückt wurde ...

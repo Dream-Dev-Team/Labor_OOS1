@@ -103,8 +103,7 @@ char Labyrinth::getZeichenAnPos(Position pos) {
 };
 
 bool Labyrinth::istMuenzeAnPos(Position pos) {
-	if (getZeichenAnPos(pos) == ':')
-		return true;
+	return (getZeichenAnPos(pos) == ':');
 };
 
 void Labyrinth::exportDatei(const char* dateiname) {
