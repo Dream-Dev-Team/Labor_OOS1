@@ -123,6 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Fahrzeug.cpp" />
+    <ClCompile Include="MyString.cpp" />
+    <ClCompile Include="Quelle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Fahrzeug.h" />
+    <ClInclude Include="MyString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
