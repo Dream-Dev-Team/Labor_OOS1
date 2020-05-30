@@ -123,6 +123,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Labor_2\L2_A3\Circle.cpp" />
+    <ClCompile Include="..\..\Labor_2\L2_A3\main.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="..\..\Labor_2\L2_A3\Point.cpp" />
+    <ClCompile Include="..\..\Labor_2\L2_A3\Polygonline.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Labor_2\L2_A3\Circle.h" />
+    <ClInclude Include="..\..\Labor_2\L2_A3\PlgElement.h" />
+    <ClInclude Include="..\..\Labor_2\L2_A3\Point.h" />
+    <ClInclude Include="..\..\Labor_2\L2_A3\Polygonline.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

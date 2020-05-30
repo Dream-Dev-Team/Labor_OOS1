@@ -12,10 +12,14 @@ public:
 
 	void setCentre(Point point);
 	void setRadius(double radius);
-	Point getCentre();
-	double getRadius();
+	Point getCentre() const;
+	double getRadius() const;
 
 	void move(double dx, double dy);
-	void print(bool endline = true);
+	void print(bool endline = true) const;
+
+	//Fix
+	stringstream& toString(stringstream& stream) const;
 };
+
 

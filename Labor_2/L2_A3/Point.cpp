@@ -1,5 +1,7 @@
 #include "Point.h"
 #include <iostream>
+#include <sstream>
+
 using namespace std;
 
 Point::Point() {
@@ -18,10 +20,10 @@ void Point::setX(double x){
 void Point::setY(double y) {
 	this->y = y;
 }
-double Point::getX() {
+double Point::getX() const {
 	return this->x;
 }
-double Point::getY() {
+double Point::getY() const {
 	return this->y;
 }
 
@@ -30,10 +32,15 @@ void Point::move(double dx, double dy) {
 	this->y += dy;
 }
 
-void Point::print(bool endline) {
+void Point::print(bool endline) const {
 	if (endline)
 		cout << "(" << this->getX() << ", " << this->getY() << ")" << endl;
 	else
 		cout << "(" << this->getX() << ", " << this->getY() << ")";
 
+}
+
+stringstream& Point::toString(stringstream& stream) const{
+	stream << "(" << this->getX() << ", " << this->getY() << ")";
+	return stream;
 }

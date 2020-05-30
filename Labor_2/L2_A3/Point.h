@@ -1,4 +1,5 @@
 #pragma once
+
 class Point
 {
 	double x;
@@ -11,10 +12,13 @@ public:
 	
 	void setX(double x);
 	void setY(double y);
-	double getX();
-	double getY();
+	double getX() const;
+	double getY() const;
 
 	void move(double dx, double dy);
-	void print(bool endline = true);
+	void print(bool endline = true) const;
+
+	//Fix
+	stringstream& toString(stringstream& stream) const;
 };
 

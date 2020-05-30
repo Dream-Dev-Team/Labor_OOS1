@@ -2,6 +2,7 @@
 #include "Point.h"
 #include "PlgElement.h"
 
+
 class Polygonline
 {
 	PlgElement* ptr;
@@ -10,7 +11,11 @@ public:
 	Polygonline& addPoint(Point newPoint);
 	void appendPolygonline(Polygonline pl);
 	void move(double dx, double dy);
-	void print();
+	void print() const; 
+
+	//Fix
+	stringstream& toString(stringstream& stream) const;
+
 	Polygonline();
 	Polygonline(Point newPoint);
 	Polygonline(Polygonline& pl);
