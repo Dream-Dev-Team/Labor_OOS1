@@ -1,6 +1,7 @@
 #include "Polygonline.h"
 #include "PlgElement.h"
 #include <iostream>
+#include <sstream>
 using namespace std;
 
 Polygonline::Polygonline() {
@@ -73,14 +74,30 @@ void Polygonline::move(double dx, double dy) {
 	}
 }
 
-void Polygonline::print() {
-	this->ptr = this->anker;
+void Polygonline::print() const {
+	PlgElement * cPtr = nullptr;
+	cPtr = this->anker;
 	cout << "|";
-	while (this->ptr != nullptr) {
-		cout << "(" << ptr->getPoint().getX() << ", " << ptr->getPoint().getY() << ")";
-		if (this->ptr->next != nullptr)
+	while (cPtr != nullptr) {
+		cout << "(" << cPtr->getPoint().getX() << ", " << cPtr->getPoint().getY() << ")";
+		if (cPtr->next != nullptr)
 			cout << " - ";
-		this->ptr = this->ptr->next;
+		cPtr = cPtr->next;
 	}
 	cout << "|" << endl;
+}
+
+stringstream& Polygonline::toString(stringstream& stream) const {
+
+	PlgElement* cPtr = nullptr;
+	cPtr = this->anker;
+	stream << "|";
+	while (cPtr != nullptr) {
+		stream << "(" << cPtr->getPoint().getX() << ", " << cPtr->getPoint().getY() << ")";
+		if (cPtr->next != nullptr)
+			stream << " - ";
+		cPtr = cPtr->next;
+	}
+	stream << "|";
+	return stream;
 }
