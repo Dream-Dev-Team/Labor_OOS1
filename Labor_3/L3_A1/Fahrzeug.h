@@ -8,9 +8,12 @@ private:
 	double km;
 
 public:
+	static double summeKm;
+
 	Fahrzeug(const char*);
+	~Fahrzeug();
 	void fahren(double);
 	friend ostream& operator<<(ostream& stream, const Fahrzeug& veh);
-
+	static double getSummeKm();
 };
 
