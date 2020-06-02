@@ -40,7 +40,9 @@ void Circle::print(bool endline) const {
 	
 }
 
+/*
 stringstream& Circle::toString(stringstream& stream) const {
 	stream << "<(" << this->centre.getX() << ", " << this->centre.getY() << "), " << this->getRadius() << ">";
 	return stream;
 }
+*/

@@ -40,7 +40,9 @@ void Point::print(bool endline) const {
 
 }
 
+/*
 stringstream& Point::toString(stringstream& stream) const{
 	stream << "(" << this->getX() << ", " << this->getY() << ")";
 	return stream;
 }
+*/

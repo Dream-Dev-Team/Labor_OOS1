@@ -19,7 +19,9 @@ public:
 	void print(bool endline = true) const;
 
 	//Fix
+	/*
 	stringstream& toString(stringstream& stream) const;
+	*/
 };
 
 

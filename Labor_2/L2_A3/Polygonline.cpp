@@ -56,13 +56,13 @@ Polygonline& Polygonline::addPoint(Point newPoint) {
 	return *this;
 }
 
-void Polygonline::appendPolygonline(Polygonline pl) {
+void Polygonline::appendPolygonline(Polygonline& pl) {
 	Polygonline newPolyL(pl);
 	this->ptr = this->anker;
 	while (this->ptr->next != nullptr) {
 		this->ptr = this->ptr->next;
 	}
-	this->ptr->next = pl.anker;
+	this->ptr->next = newPolyL.anker;
 }
 
 void Polygonline::move(double dx, double dy) {
@@ -87,6 +87,7 @@ void Polygonline::print() const {
 	cout << "|" << endl;
 }
 
+/*
 stringstream& Polygonline::toString(stringstream& stream) const {
 
 	PlgElement* cPtr = nullptr;
@@ -101,3 +102,4 @@ stringstream& Polygonline::toString(stringstream& stream) const {
 	stream << "|";
 	return stream;
 }
+*/

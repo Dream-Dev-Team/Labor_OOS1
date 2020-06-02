@@ -9,12 +9,14 @@ class Polygonline
 	PlgElement* anker;
 public:
 	Polygonline& addPoint(Point newPoint);
-	void appendPolygonline(Polygonline pl);
+	void appendPolygonline(Polygonline& pl);
 	void move(double dx, double dy);
 	void print() const; 
 
 	//Fix
+	/*
 	stringstream& toString(stringstream& stream) const;
+	*/
 
 	Polygonline();
 	Polygonline(Point newPoint);
