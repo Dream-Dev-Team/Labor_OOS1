@@ -93,6 +93,12 @@ void PacMan::spielen() {
 		// std::this_thread::sleep_for(std::chrono::milliseconds(700));
 		if (_kbhit()) { // wenn Taste gedrückt wurde ...
 			c = _getch();
+
+			if (c == 0 || c == -32)
+			{
+				c = _getch();
+			}
+
 			switch (int(c)) {
 				// oben
 			case 'w': r = OBEN; break;
@@ -117,7 +123,7 @@ void PacMan::spielen() {
 		cout << "Zum Abbrechen q druecken" << endl;
 		// Prüfen, ob noch Münzen da sind 
 		// und ob der Spieler noch nicht gefangen wurde
-		cond = (muenzen > 1);
+		cond = (muenzen > 0);
 		for (int i = 0; i < kAnzGeister; i++) {
 			Position geist = g[i]->getPos();
 			cond = cond && !(s->getPos().istGleichZu(geist));

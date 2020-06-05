@@ -6,14 +6,14 @@ class Fifo
 	char* ptr;			//Zeiger auf Array
 	int wPos;			//Position des nächsten Schreibens
 	int rPos;			//Position des nächsten Lesens
-	int loops;			//
 
 public:
-	Fifo();
+	Fifo(int);
 	~Fifo();
 
 	int getWPos();
 	int getRPos();
+	int getNumber();
 	bool isEmpty();
 	bool isFull();
 
