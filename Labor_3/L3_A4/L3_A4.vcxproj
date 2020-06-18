@@ -18,6 +18,22 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="main.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="PlgElement.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Polygonline.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="PlgElement.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="Polygonline.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{1D43B899-FA37-4942-BABC-5743FF47DE43}</ProjectGuid>
