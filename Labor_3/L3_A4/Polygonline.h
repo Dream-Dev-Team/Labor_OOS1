@@ -21,4 +21,6 @@ public:
 	Polygonline(Point newPoint);
 	Polygonline(Polygonline& pl);
 	~Polygonline();
+
+	friend std::ostream& operator<<(std::ostream&, Polygonline&);
 };

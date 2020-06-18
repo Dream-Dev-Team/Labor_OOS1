@@ -131,19 +131,9 @@ string Polygonline::toString() const {
 	}
 	stream << "|";
 	return stream.str();
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+std::ostream& operator<<(std::ostream& ostream, Polygonline& pol) {
+	ostream << pol.toString();
+	return ostream;
 }

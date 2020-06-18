@@ -53,3 +53,8 @@ string Circle::toString() const {
 	stream << "<(" << this->centre.getX() << ", " << this->centre.getY() << "), " << this->getRadius() << ">";
 	return stream.str();
 }
+
+std::ostream& operator<<(std::ostream& ostream, Circle& c) {
+	ostream << c.toString();
+	return ostream;
+}

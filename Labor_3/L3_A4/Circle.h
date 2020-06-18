@@ -22,5 +22,6 @@ public:
 	void print(bool endline = true) const;
 
 	std::string toString() const;
+	friend std::ostream& operator<<(std::ostream&, Circle&);
 };
 

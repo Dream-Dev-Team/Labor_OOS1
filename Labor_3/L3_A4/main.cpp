@@ -30,6 +30,13 @@ int main(void)
 	cout << l.toString() << endl;
 
 	UserInput(true);
+
+	cout << p << endl;
+	cout << c << endl;
+	c.move(1.0, 2.0);
+	cout << c << endl;
+	cout << l << endl;
+
 	return 0;
 }
 

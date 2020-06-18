@@ -67,3 +67,8 @@ void operator>>(istringstream& stream, Point& p) {
 	s = s.substr(s.find(",") + 1, s.length() - s.find(","));
 	p.setY(stod(s));
 }
+
+std::ostream& operator<<(std::ostream& ostream, Point& p) {
+	ostream << p.toString();
+	return ostream;
+}
