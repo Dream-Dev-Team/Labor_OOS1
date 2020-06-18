@@ -68,7 +68,44 @@ void operator>>(istringstream& stream, Point& p) {
 	p.setY(stod(s));
 }
 
-std::ostream& operator<<(std::ostream& ostream, Point& p) {
+std::ostream& operator<<(std::ostream& ostream, const Point& p) {
 	ostream << p.toString();
 	return ostream;
+}
+
+Point& Point::operator+(const Point& p2) {
+	Point* newP = new Point(this->getX() + p2.getX(), this->getY() + p2.getY());
+	return *newP;
+}
+
+Point& Point::operator-(const Point& p2) {
+	Point* newP = new Point(this->getX() - p2.getX(), this->getY() - p2.getY());
+	return *newP;
+}
+
+Point& Point::operator-() {
+	this->x *= -1;
+	this->y *= -1;
+	return *this;
+}
+
+Point& operator+(double d, const Point& p2) {
+	Point* newP = new Point(p2.getX() + d, p2.getY() + d);
+	return *newP;
+}
+
+Point& Point::operator+(double d) {
+	Point* newP = new Point(this->getX() + d, this->getY() + d);
+	return *newP;
+}
+
+Point& Point::operator++() {
+	this->move(1, 1);
+	return *this;
+}
+
+Point& Point::operator++(int) {
+	Point p = *this;
+	this->move(1, 1);
+	return p;
 }

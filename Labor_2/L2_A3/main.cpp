@@ -1,18 +1,20 @@
+//////////////////////////////////////////////////////
+//Dateiname: L3_A3
+//Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
+//Enthaltene Module: Point.h, Ciurcle.h, Polygonline.h, PolygonElement.h
+//Entwicklungsbeginn: 11.06.2020		Entwicklungsende: 18.06.2020
+//Zeitaufwand gesamt: to much
+//Letzte Modifikationen: 18.06.2020
+//////////////////////////////////////////////////////
+
+using namespace std;
 #include <iostream>
 #include <string>
 #include <sstream>
-using namespace std;
 #include "Point.h"
 #include "Circle.h"
 #include "Polygonline.h"
-//////////////////////////////////////////////////////
-//Dateiname: 
-//Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
-//Enthaltene Module: 
-//Entwicklungsbeginn: xx.xx.xx		Entwicklungsende: xx.xx.xx
-//Zeitaufwand gesamt: 
-//Letzte Modifikationen: 
-//////////////////////////////////////////////////////
+
 void* UserInput(bool);
 
 int main(void)

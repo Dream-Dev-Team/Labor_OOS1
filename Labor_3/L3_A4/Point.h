@@ -23,6 +23,13 @@ public:
 	std::string toString() const;
 
 	friend void operator>>(std::istringstream&, Point&);
-	friend std::ostream& operator<<(std::ostream&, Point&);
+	friend std::ostream& operator<<(std::ostream&, const Point&);
+	Point& operator+(const Point& p2);
+	friend Point& operator+(double d, const Point& p2);
+	Point& operator+(double d);
+	Point& operator-(const Point& p2);
+	Point& operator-();
+	Point& operator++(); //präfix
+	Point& operator++(int); //postfix
 };
 

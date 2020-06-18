@@ -15,6 +15,12 @@ Circle::Circle(Point point) {
 	this->radius = 0;
 }
 
+Circle::Circle(Point point, double radius) {
+	this->centre.setX(point.getX());
+	this->centre.setY(point.getY());
+	this->radius = radius;
+}
+
 Circle::Circle(string s) {
 	this->radius = stod(s.substr(s.find_last_of(",") + 1, s.length() - s.find_last_of(",") - 1));
 	Point buffer(s);

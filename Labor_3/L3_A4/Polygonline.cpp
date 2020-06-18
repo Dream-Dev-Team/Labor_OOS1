@@ -94,6 +94,14 @@ void Polygonline::appendPolygonline(Polygonline& pl) {
 	this->ptr->next = newPolyL.anker;
 }
 
+void Polygonline::appendPolygonline(const Polygonline& pl) {
+	this->ptr = this->anker;
+	while (this->ptr->next != nullptr) {
+		this->ptr = this->ptr->next;
+	}
+	this->ptr->next = pl.anker;
+}
+
 void Polygonline::move(double dx, double dy) {
 	this->ptr = anker;
 
@@ -133,7 +141,17 @@ string Polygonline::toString() const {
 	return stream.str();
 }
 
-std::ostream& operator<<(std::ostream& ostream, Polygonline& pol) {
+std::ostream& operator<<(std::ostream& ostream, const Polygonline& pol) {
 	ostream << pol.toString();
 	return ostream;
+}
+
+Polygonline& Polygonline::operator+(Point p) {
+	this->addPoint(p);
+	return *this;
+}
+
+Polygonline& Polygonline::operator+(const Polygonline& pol) {
+	this->appendPolygonline(pol);
+	return *this;
 }

@@ -1,74 +1,51 @@
+//////////////////////////////////////////////////////
+//Dateiname: L3_A4
+//Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
+//Enthaltene Module: Point.h, Ciurcle.h, Polygonline.h, PolygonElement.h
+//Entwicklungsbeginn: 11.06.2020		Entwicklungsende: 18.06.2020
+//Zeitaufwand gesamt: to much
+//Letzte Modifikationen: 18.06.2020
+//////////////////////////////////////////////////////
 #include <iostream>
 #include <string>
-#include <sstream>
-using namespace std;
-#include "Point.h"
 #include "Circle.h"
 #include "Polygonline.h"
-//////////////////////////////////////////////////////
-//Dateiname: 
-//Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
-//Enthaltene Module: 
-//Entwicklungsbeginn: xx.xx.xx		Entwicklungsende: xx.xx.xx
-//Zeitaufwand gesamt: 
-//Letzte Modifikationen: 
-//////////////////////////////////////////////////////
-void* UserInput(bool);
+using namespace std;
 
+// Hauptprogramm
 int main(void)
 {
-	string str1("(1.1,2.1)");
-	string str2("<(5.5, 6.6), 10.1>");
-	string str3("|(1.1,1.2) - (2.1, 2.2) -(3.1,3.2) |");
-	Point p(str1); Circle c(str2);
-	Polygonline l(str3);
-
-	cout << p.toString() << endl;
-	cout << c.toString() << endl;
-	c.move(1.0, 2.0);
-	cout << c.toString() << endl;
-	cout << l.toString() << endl;
-
-	UserInput(true);
-
-	cout << p << endl;
-	cout << c << endl;
-	c.move(1.0, 2.0);
-	cout << c << endl;
-	cout << l << endl;
-
+	Point p1(0, 0);
+	const Point p2(2, 2);
+	const Point p3(3, 3);
+	Circle c(p1, 1.1);
+	cout << "Circle c: " << c << endl;
+	p1 = p1 + 0.5;
+	p1 = 0.5 + p1;
+	cout << "p1: " << p1 << endl;
+	cout << "p2: " << p2 << endl;
+	cout << "p3: " << p3 << endl;
+	Point p4 = p1 + p2 - p3 + 4.0;
+	cout << "p4: " << p4 << endl;
+	p1 = -p4;
+	cout << "p1: " << p1 << endl;
+	cout << "p4: " << p4 << endl;
+	Point p5 = p1++;
+	cout << "p5: " << p5 << endl;
+	cout << "p1: " << p1 << endl;
+	p5 = ++++++++p1;
+	cout << "p5: " << p5 << endl;
+	cout << "p1: " << p1 << endl;
+	cout << "p2: " << p2 << endl;
+	cout << "p3: " << p3 << endl;
+	cout << "p4: " << p4 << endl;
+	Polygonline l1;
+	cout << "l1: " << l1 << endl;
+	(l1 + p1) + p2;
+	cout << "l1: " << l1 << endl;
+	const Polygonline l2(p4);
+	l1 + l2;
+	cout << "l1: " << l1 << endl;
+	cout << "l2: " << l2 << endl;
 	return 0;
-}
-
-void* UserInput(bool print = false) {
-	string input;
-	char modus;
-	cin >> input;
-
-	modus = input[0];
-	switch (modus)
-	{
-	case 'P':
-	case 'p': {Point* returnVal = new Point(input);
-		if (print)
-			returnVal->print();
-		return returnVal; }
-			  break;
-	case 'C':
-	case 'c': {Circle* returnVal = new Circle(input);
-		if (print)
-			returnVal->print();
-		return returnVal;
-		break; }
-	case 'L':
-	case 'l': {Polygonline* returnVal = new Polygonline(input);
-		if (print)
-			returnVal->print();
-		return returnVal;
-		break; }
-	default:
-		cout << "Error 404: Mode not found!" << endl;
-		return nullptr;
-		break;
-	}
 }

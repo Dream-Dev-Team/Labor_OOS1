@@ -11,6 +11,7 @@ class Polygonline
 public:
 	Polygonline& addPoint(Point newPoint);
 	void appendPolygonline(Polygonline& pl);
+	void appendPolygonline(const Polygonline& pl);
 	void move(double dx, double dy);
 	void print() const;
 
@@ -22,5 +23,7 @@ public:
 	Polygonline(Polygonline& pl);
 	~Polygonline();
 
-	friend std::ostream& operator<<(std::ostream&, Polygonline&);
+	friend std::ostream& operator<<(std::ostream&, const Polygonline&);
+	Polygonline& operator+(Point p);
+	Polygonline& operator+(const Polygonline& pol);
 };

@@ -11,6 +11,7 @@ public:
 
 	Circle();
 	Circle(Point point);
+	Circle(Point point, double radius);
 	Circle(std::string);
 
 	void setCentre(Point point);
