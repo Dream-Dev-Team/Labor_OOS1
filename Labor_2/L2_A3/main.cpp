@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <sstream>
 using namespace std;
 #include "Point.h"
 #include "Circle.h"
@@ -61,6 +63,20 @@ int main(void)
 	cout << "Ausgabe 5:" << endl;
 	l1.print();
 	l2.print();
+
+	cout << "\nAufgabe 3" << endl;
+	string arg = " (1.1, 2.2) ist ein Punkt.";
+	istringstream is(arg);
+	is >> p;
+	cout << "Punkt nach istringstream input: " << p.toString()<<endl;
+	Point cop("1.3, 2.5");
+	cout << "Neuer Punkt mit string initialisiert: " << cop.toString() << endl;
+	arg = "<(50.5, 6.06), 100.1>";
+	Circle coc(arg);
+	cout << "Neuer Circle mit string initialisiert: " << coc.toString() << endl;
+	arg="|(1.1,1.2) - (2.1, 2.2) -(3.1,3.2) |";
+	Polygonline loc(arg);
+	cout << "Neue Poligonline mit string initialisiert: " << loc.toString() << endl;
 
 	return 0;
 }

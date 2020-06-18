@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 class Point
 {
@@ -9,6 +10,7 @@ public:
 
 	Point();
 	Point(double x, double y);
+	Point(std::string);
 	
 	void setX(double x);
 	void setY(double y);
@@ -18,9 +20,8 @@ public:
 	void move(double dx, double dy);
 	void print(bool endline = true) const;
 
-	//Fix
-	/*
-	stringstream& toString(stringstream& stream) const;
-	*/
+	std::string toString() const;
+
+	friend void operator>>(std::istringstream&, Point&);
 };
 

@@ -1,5 +1,7 @@
 #pragma once
 #include "Point.h"
+#include <string>
+
 class Circle
 {
 	Point centre;
@@ -9,6 +11,7 @@ public:
 
 	Circle();
 	Circle(Point point);
+	Circle(std::string);
 
 	void setCentre(Point point);
 	void setRadius(double radius);
@@ -18,10 +21,8 @@ public:
 	void move(double dx, double dy);
 	void print(bool endline = true) const;
 
-	//Fix
-	/*
-	stringstream& toString(stringstream& stream) const;
-	*/
+	std::string toString() const;
+	
 };
 
 

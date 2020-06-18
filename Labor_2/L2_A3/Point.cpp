@@ -1,12 +1,22 @@
 #include "Point.h"
 #include <iostream>
 #include <sstream>
+#include <string>
 
 using namespace std;
 
 Point::Point() {
 	this->x = 0;
 	this->y = 0;
+}
+
+Point::Point(string s) {
+	Point p;
+	istringstream is(s);
+	is >> p;
+	this->x = p.getX();
+	this->y = p.getY();
+
 }
 
 Point::Point(double x, double y) {
@@ -40,9 +50,21 @@ void Point::print(bool endline) const {
 
 }
 
-/*
-stringstream& Point::toString(stringstream& stream) const{
+
+string Point::toString() const{
+	ostringstream stream;
 	stream << "(" << this->getX() << ", " << this->getY() << ")";
-	return stream;
+	return stream.str();
 }
-*/
+
+
+void operator>>(istringstream& stream, Point & p) {
+	string s;
+
+	s = stream.str();
+	s=s.substr(s.find("(")+1, s.find(")")-s.find("(")-1);
+	p.setX(stod(s.substr(0, s.find(", "))));
+	s = s.substr(s.find(" ") + 1, s.length() - s.find(" "));
+	p.setY(stod(s));
+
+}

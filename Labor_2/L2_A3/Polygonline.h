@@ -1,6 +1,7 @@
 #pragma once
 #include "Point.h"
 #include "PlgElement.h"
+#include <string>
 
 
 class Polygonline
@@ -12,13 +13,11 @@ public:
 	void appendPolygonline(Polygonline& pl);
 	void move(double dx, double dy);
 	void print() const; 
-
-	//Fix
-	/*
-	stringstream& toString(stringstream& stream) const;
-	*/
+	
+	std::string toString() const;
 
 	Polygonline();
+	Polygonline(std::string);
 	Polygonline(Point newPoint);
 	Polygonline(Polygonline& pl);
 	~Polygonline();

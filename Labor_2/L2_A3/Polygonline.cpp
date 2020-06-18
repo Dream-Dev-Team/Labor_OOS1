@@ -38,6 +38,35 @@ Polygonline::Polygonline(Polygonline& pl){
 	}
 }
 
+Polygonline::Polygonline(string s) {
+	this->anker = nullptr;
+	this->ptr = nullptr;
+	s = s.substr(1, s.length() - 1);
+	for (char c=s[0]; c != '|'; c = s[0]) {
+		switch (c) {
+		case '(':
+			{	Point* pptr = nullptr;
+				pptr = new Point(s);
+				if (this->ptr == nullptr) {
+					this->anker = new PlgElement(*pptr);
+					this->ptr = anker;
+				}
+				else {
+					this->ptr->next = new PlgElement(*pptr);
+					this->ptr = this->ptr->next;
+				}
+				s = s.substr(s.find(")" + 1, s.length() - s.find(")") - 1)); 
+			}
+			break;
+		default:
+			s = s.substr(1, s.length() - 1);
+			break;
+		}
+	}
+
+}
+
+
 Polygonline::~Polygonline(){
 }
 
@@ -87,8 +116,9 @@ void Polygonline::print() const {
 	cout << "|" << endl;
 }
 
-/*
-stringstream& Polygonline::toString(stringstream& stream) const {
+
+string Polygonline::toString() const{
+	ostringstream stream;
 
 	PlgElement* cPtr = nullptr;
 	cPtr = this->anker;
@@ -100,6 +130,5 @@ stringstream& Polygonline::toString(stringstream& stream) const {
 		cPtr = cPtr->next;
 	}
 	stream << "|";
-	return stream;
+	return stream.str();
 }
-*/
