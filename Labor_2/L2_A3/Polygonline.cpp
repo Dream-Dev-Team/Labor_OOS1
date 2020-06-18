@@ -46,7 +46,7 @@ Polygonline::Polygonline(string s) {			//Polygonline mit String
 		switch (c) {
 		case '(':
 			{	Point* pptr = nullptr;
-				pptr = new Point(s);
+				pptr = new Point(s.substr(1, s.find(")")-1));
 				if (this->ptr == nullptr) {
 					this->anker = new PlgElement(*pptr);
 					this->ptr = anker;
@@ -55,7 +55,7 @@ Polygonline::Polygonline(string s) {			//Polygonline mit String
 					this->ptr->next = new PlgElement(*pptr);
 					this->ptr = this->ptr->next;
 				}
-				s = s.substr(s.find(")" + 1, s.length() - s.find(")") - 1)); 
+				s = s.substr(s.find_first_of(")") + 1, s.length() - s.find_first_of(")") - 1); 
 			}
 			break;
 		default:
@@ -131,4 +131,19 @@ string Polygonline::toString() const{
 	}
 	stream << "|";
 	return stream.str();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

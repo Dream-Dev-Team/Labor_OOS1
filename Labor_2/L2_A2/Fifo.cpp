@@ -49,7 +49,7 @@ int Fifo::push(char input) {
 		this->ptr[wPos] = input;
 		this->wPos++;
 		this->number++;
-		return 1;
+		return this->wPos - 1;
 	}
 	else
 		return -1;

@@ -63,8 +63,7 @@ void operator>>(istringstream& stream, Point & p) {
 
 	s = stream.str();
 	s=s.substr(s.find("(")+1, s.find(")")-s.find("(")-1);
-	p.setX(stod(s.substr(0, s.find(", "))));
-	s = s.substr(s.find(" ") + 1, s.length() - s.find(" "));
+	p.setX(stod(s.substr(0, s.find(","))));
+	s = s.substr(s.find(",") + 1, s.length() - s.find(","));
 	p.setY(stod(s));
-
 }

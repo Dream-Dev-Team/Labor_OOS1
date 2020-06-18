@@ -22,7 +22,6 @@ public:
 	void print(bool endline = true) const;
 
 	std::string toString() const;
-	
 };
 
 
