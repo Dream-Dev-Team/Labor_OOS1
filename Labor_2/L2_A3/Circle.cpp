@@ -35,8 +35,8 @@ double Circle::getRadius() const {
 }
 
 void Circle::move(double dx, double dy) {
-	this->centre.setX(centre.getX() + dx);
-	this->centre.setY(centre.getY() + dy);
+	this->centre.move(dx, dy);
+	// this->centre.setY(centre.getY() + dy);
 }
 
 void Circle::print(bool endline) const {

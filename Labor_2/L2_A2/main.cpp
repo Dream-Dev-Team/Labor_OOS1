@@ -12,21 +12,23 @@ using namespace std;
 
 int main()
 {
-	Fifo fif;
+	Fifo fif(5);
 
-	fif.push('\0');
+	fif.push('A');
 	fif.push('B');
-	fif.push('C');
+	fif.push(' ');
 	fif.push('D');
 	fif.push('E');
 
 	fif.push('F');
+	cout << "Number of Elements: " << fif.getNumber() << endl;
 	fif.push('G');
 	fif.push('H');
 	fif.push('I');
 	fif.push('J');
 
 	fif.push('K');
+	cout << "Number of Elements: " << fif.getNumber() << endl;
 	fif.push('L');
 	fif.push('M');
 	fif.push('N');
@@ -41,12 +43,13 @@ int main()
 	fif.push('#');
 	fif.push('#');
 
-	for (int i = 0; i < 20; i++) {
+	for (int i = 0; i < 10; i++) {
 		cout << fif.getRPos() << " : " << fif.pop() << endl;
 	}
 	fif.push('U');
 	fif.push('V');
-	for (int i = 0; i < 20; i++) {
+	cout << "Number of Elements: " << fif.getNumber() << endl;
+	for (int i = 0; i < 10; i++) {
 		cout << fif.getRPos() << " : " << fif.pop() << endl;
 	}
 }
