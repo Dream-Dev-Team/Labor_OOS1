@@ -38,8 +38,8 @@ Polygonline::Polygonline(Polygonline& pl){
 	}
 }
 
-Polygonline::Polygonline(string s) {
-	this->anker = nullptr;
+Polygonline::Polygonline(string s) {			//Polygonline mit String
+	this->anker = nullptr;	
 	this->ptr = nullptr;
 	s = s.substr(1, s.length() - 1);
 	for (char c=s[0]; c != '|'; c = s[0]) {
