@@ -84,9 +84,10 @@ Point& Point::operator-(const Point& p2) {
 }
 
 Point& Point::operator-() {
-	this->x *= -1;
-	this->y *= -1;
-	return *this;
+	Point newP = *this;
+	newP.x *= -1;
+	newP.y *= -1;
+	return newP;
 }
 
 Point& operator+(double d, const Point& p2) {
