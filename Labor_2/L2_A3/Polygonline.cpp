@@ -131,19 +131,4 @@ string Polygonline::toString() const{
 	}
 	stream << "|";
 	return stream.str();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
