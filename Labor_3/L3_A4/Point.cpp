@@ -16,7 +16,6 @@ Point::Point(string s) {
 	is >> p;
 	this->x = p.getX();
 	this->y = p.getY();
-
 }
 
 Point::Point(double x, double y) {
@@ -90,14 +89,18 @@ Point& Point::operator-() {
 	return newP;
 }
 
-Point& operator+(double d, const Point& p2) {
-	Point* newP = new Point(p2.getX() + d, p2.getY() + d);
-	return *newP;
+Point operator+(double d, const Point& p2) {
+	/*Point* newP = new Point(p2.getX() + d, p2.getY() + d);
+	return *newP;*/
+
+	return p2 + d;
 }
 
-Point& Point::operator+(double d) {
-	Point* newP = new Point(this->getX() + d, this->getY() + d);
-	return *newP;
+Point Point::operator+(double d) const {
+	/*Point* newP = new Point(this->getX() + d, this->getY() + d);
+	return *newP;*/
+
+	return Point(x + d, y + d);
 }
 
 Point& Point::operator++() {
@@ -105,7 +108,7 @@ Point& Point::operator++() {
 	return *this;
 }
 
-Point& Point::operator++(int) {
+Point Point::operator++(int) {
 	Point p = *this;
 	this->move(1, 1);
 	return p;
