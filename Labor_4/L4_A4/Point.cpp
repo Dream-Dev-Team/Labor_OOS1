@@ -2,11 +2,30 @@
 #include <iostream>
 
 using namespace std;
+extern bool debugConstructor;
 
 Point::Point(double x, double y)
 {
 	this->x = x;
 	this->y = y;
+	if (debugConstructor) {
+		cout << "Konstruktor der Klasse Point(param), Objekt:" << this->getID() << endl;
+	}
+}
+
+Point::Point(std::string str) : Point()
+{
+	istringstream ss(str);
+	ss >> *this;
+	if (debugConstructor) {
+		cout << "Konstruktor der Klasse Point(convert), Objekt:" << this->getID() << endl;
+	}
+}
+
+Point::~Point() {
+	if (debugConstructor) {
+		cout << "Destruktor der Klasse Point, Objekt:" << this->getID() << endl;
+	}
 }
 
 double Point::getX() const
@@ -49,12 +68,6 @@ std::string Point::toString() const
 	stringstream ss;
 	ss << "(" << x << ", " << y << ")";
 	return ss.str();
-}
-
-Point::Point(std::string str) : Point()
-{
-	istringstream ss(str);
-	ss >> *this;
 }
 
 istream& operator >> (istream& is, Point& p)

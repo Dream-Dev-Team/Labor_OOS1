@@ -30,6 +30,9 @@
     <ClCompile Include="Polygonline.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="ObjCounter.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.hpp">
@@ -42,6 +45,15 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Polygonline.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjCounter.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawingObject.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="OneDimObject.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

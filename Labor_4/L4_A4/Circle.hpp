@@ -2,10 +2,11 @@
 
 #include "Point.hpp"
 #include <iostream>
+#include"OneDimObject.h"
 
 using namespace std;
 
-class Circle
+class Circle:public OneDimObject
 {
 	Point centre;
 	double radius;
@@ -39,4 +40,6 @@ public:
 	friend istream& operator>>(istream& is, Circle& c);
 
 	friend ostream& operator<<(ostream& is, Circle& c);
+
+	~Circle();
 };

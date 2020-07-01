@@ -1,10 +1,21 @@
 #include "PlgElement.hpp"
+extern bool debugConstruktor;
 
 PlgElement::PlgElement(Point& p)
 {
 	point = p;
 	next = nullptr;
+	if (debugConstructor) {
+		cout << "Konstruktor der Klasse PlgElement, Objekt:" << this->getID() << endl;
+	}
 }
+PlgElement::~PlgElement() {
+	if (debugConstructor) {
+		cout << "Destruktor der Klasse PlgElement, Objekt:" << this->getID() << endl;
+	}
+
+}
+
 
 void PlgElement::print(bool nl) const
 {

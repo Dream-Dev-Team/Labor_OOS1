@@ -1,13 +1,15 @@
 #pragma once
 #include "Point.hpp"
+#include "DrawingObject.h"
 
-class PlgElement
+class PlgElement :DrawingObject
 {
     Point point;
     PlgElement* next;
 
 public:
     PlgElement(Point& p);
+    ~PlgElement();
 
     // gibt den Punkt auf der Konsole aus
     void print(bool nl = true) const;
