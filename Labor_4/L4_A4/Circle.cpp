@@ -1,16 +1,26 @@
 #include "Circle.hpp"
-
+extern bool debugConstructor;
 Circle::Circle(Point p, double r)
 {
+	if (debugConstructor) {
+		cout << "Konstruktor der Klasse Circle(param), Objekt:" << this->getID() << endl;
+
+	}
 	centre = p;
 	radius = r;
+
 }
 
 Circle::Circle(string str)
 {
+	if (debugConstructor) {
+		cout << "Konstruktor der Klasse Circle(convert), Objekt:" << this->getID() << endl;
+
+	}
 	radius = 0;
 	istringstream ss(str);
 	ss >> *this;
+
 }
 
 const Point& Circle::getCentre() const 
@@ -67,4 +77,9 @@ ostream& operator<<(ostream& os, Circle& c)
 {
 	os << c.toString();
 	return os;
+}
+
+Circle::~Circle() {
+
+
 }

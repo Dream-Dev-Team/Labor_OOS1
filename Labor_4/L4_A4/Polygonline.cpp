@@ -5,22 +5,37 @@ using namespace std;
 
 Polygonline::Polygonline()
 {
+	if (debugConstructor) {
+		cout << "Konstruktor der Klasse Polygonline(default), Objekt:" << this->getID() << endl;
+	}
 	start = end = nullptr;
+
 }
 
 Polygonline::Polygonline(Point& p)
 {
+	if (debugConstructor) {
+		cout << "Konstruktor der Klasse Polygonline(convert), Objekt:" << this->getID() << endl;
+	}
 	start = end = new PlgElement(p);
+
 }
 
 Polygonline::Polygonline(string str) : Polygonline()
 {
+	if (debugConstructor) {
+		cout << "Konstruktor der Klasse Polygonline(convert), Objekt:" << this->getID() << endl;
+	}
 	istringstream ss(str);
 	ss >> *this;
+
 }
 
 Polygonline::~Polygonline()
 {
+	if (debugConstructor) {
+		cout << "Destruktor der Klasse Polygonline, Objekt:" << this->getID() << endl;
+	}
 	PlgElement* p = start;
 	PlgElement* toDelete;
 
@@ -30,6 +45,7 @@ Polygonline::~Polygonline()
 		p = p->getNext();
 		delete toDelete;
 	}
+
 }
 
 void Polygonline::appendPolygonline(const Polygonline& pl)

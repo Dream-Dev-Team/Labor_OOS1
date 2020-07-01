@@ -1,8 +1,9 @@
 #pragma once
 #include <sstream>
+#include "DrawingObject.h"
 
 using namespace std;
-class Point
+class Point:public DrawingObject
 {
 	double x;
 	double y;
@@ -10,6 +11,7 @@ public:
 
 	Point(double x = 0.0, double y = 0.0);
 	Point(string);
+	~Point();
 	double getX() const;
 	double getY() const;
 
