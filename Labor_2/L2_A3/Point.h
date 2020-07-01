@@ -22,6 +22,6 @@ public:
 
 	std::string toString() const;
 
-	friend void operator>>(std::istringstream&, Point&);
+	friend std::istringstream& operator>>(std::istringstream&, Point&);
 };
 

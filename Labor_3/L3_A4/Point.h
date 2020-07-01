@@ -25,11 +25,11 @@ public:
 	friend void operator>>(std::istringstream&, Point&);
 	friend std::ostream& operator<<(std::ostream&, const Point&);
 	Point& operator+(const Point& p2);
-	friend Point& operator+(double d, const Point& p2);
-	Point& operator+(double d);
+	friend Point operator+(double d, const Point& p2);
+	Point operator+(double d) const;
 	Point& operator-(const Point& p2);
 	Point& operator-();
 	Point& operator++(); //präfix
-	Point& operator++(int); //postfix
+	Point operator++(int); //postfix
 };
 

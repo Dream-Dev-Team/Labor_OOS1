@@ -11,12 +11,8 @@ Point::Point() {
 }
 
 Point::Point(string s) {
-	Point p;
 	istringstream is(s);
-	is >> p;
-	this->x = p.getX();
-	this->y = p.getY();
-
+	is >> *this;
 }
 
 Point::Point(double x, double y) {
@@ -58,12 +54,19 @@ string Point::toString() const{
 }
 
 
-void operator>>(istringstream& stream, Point & p) {
-	string s;
+istringstream& operator>>(istringstream& stream, Point & p) {
+	char dummy;
 
+	stream >> dummy >> p.x >> dummy >> p.y >> dummy;
+
+	/*
+	string s;
 	s = stream.str();
 	s=s.substr(s.find("(")+1, s.find(")")-s.find("(")-1);
 	p.setX(stod(s.substr(0, s.find(","))));
 	s = s.substr(s.find(",") + 1, s.length() - s.find(","));
-	p.setY(stod(s));
+	p.setY(stod(s));*/
+
+	return stream;
 }
+
