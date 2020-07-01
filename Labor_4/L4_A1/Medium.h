@@ -39,6 +39,5 @@ public:
 	void ausleihen(Person& p, Datum von, Datum bis);
 	// Medium in der Konsole ausgeben
 	void print() const;
-
 };
 

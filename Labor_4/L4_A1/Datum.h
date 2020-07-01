@@ -9,12 +9,9 @@ class Datum {
 	// Elemente eines Datums
 	int tag, monat, jahr;
 
-
-
-
 public:
 	// Standardkonstruktor
-	Datum(int = 0, int = 0, int = 0);
+	Datum(int t = 0, int m = 0, int j = 0);
 	// Konvertierkonstruktor für String
 	Datum(const string&);
 	// Konvertierkonstruktor für C-String

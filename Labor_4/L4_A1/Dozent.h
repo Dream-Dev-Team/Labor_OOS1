@@ -4,7 +4,7 @@
 #include "Person.h"
 
 // Klasse Dozent als Spezialisierung von Person
-class Dozent {
+class Dozent : public Person{
 	// Prüfernummer des Dozenten
 	int prfrNr;
 public:
