@@ -4,7 +4,7 @@
 #include "Medium.h"
 
 // Klasse für die Bücher als Spezialisierung von Medium
-class Buch {
+class Buch : public Medium {
 	// Autor(en) des Buches
 	string autor;
 public:

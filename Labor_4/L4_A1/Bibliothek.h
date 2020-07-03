@@ -11,7 +11,7 @@
 // können.
 class Bibliothek {
 	// Anzahl der in der im Bibliothekskatalog verzeichneten Medien
-	int anz;
+	int anz = 0;
 	// maximale Anzahl der Medien im Katalog
 	const int maxAnz;
 	// Zeiger auf das Array der Zeiger auf die Medien im Katalog
@@ -21,7 +21,7 @@ public:
 	// Standardkonstruktor
 	Bibliothek(int maxAnz = 1000);
 	// Destruktor
-	~Bibliothek();
+	//~Bibliothek();
 	// Kopie eines Buches in den Katalog der Bibliothek eintragen
 	void mediumBeschaffen(Buch&);
 	// Kopie einer DVD in den Katalog der Bibliothek eintragen

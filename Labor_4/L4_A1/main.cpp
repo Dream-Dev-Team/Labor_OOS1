@@ -21,6 +21,7 @@ int main() {
 	setlocale(LC_ALL, "");
 	// Bibliothek mit 100 Plätzen initialisieren
 	Bibliothek bib(100);
+
 	// Bücher und DVDs erstellen
 	Buch b1("C++: das umfassende Handbuch", "Jürgen Wolf",
 		"Galileo Press", 2014);
@@ -40,6 +41,8 @@ für 0- bis 3-Jährige", "Cornelsen", 2013, 30);
 	d1.print();
 	// Kopien der Bücher und DVDs (Medien) in die Bibliothek 
 	// einfügen
+
+
 	bib.mediumBeschaffen(b1);
 	bib.mediumBeschaffen(b2);
 	bib.mediumBeschaffen(b3);
@@ -49,18 +52,23 @@ für 0- bis 3-Jährige", "Cornelsen", 2013, 30);
 	bib.mediumBeschaffen(d1);
 	bib.mediumBeschaffen(d2);
 	// Bestand der Bibliothek ausgeben
+
 	bib.print();
+
 	// Personen anlegen
 	Student p1("Hägar", 12345678);
 	Student p2("Hilde", 87654321);
+
 	Dozent p3("Prof A", 4711);
 	// Suchen im Bibliotheksbestand durchführen
 	bib.mediumSuchen("C++");
 	bib.mediumSuchen("Kita");
+
 	// Medien ausleihen
 	bib.mediumAusleihen(2, p1, "25.04.2014");
 	bib.mediumAusleihen(7, p2, "26.04.2014");
 	bib.mediumAusleihen(6, p3, "21.04.2014");
 	// Bestand der Bibliothek ausgeben
 	bib.print();
+	return 0;
 }
