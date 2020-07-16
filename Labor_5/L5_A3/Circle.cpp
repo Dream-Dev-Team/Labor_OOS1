@@ -85,6 +85,6 @@ Circle::~Circle() {
 }
 
 MyVectorData* Circle::clone() const {
-	Circle c(this->centre, this->radius);
-	return &c;
+	Circle* c = new Circle(this->centre, this->radius);
+	return c;
 }

@@ -125,6 +125,6 @@ Point Point::operator++(int i)
 }
 
 MyVectorData* Point::clone() const {
-	Point pt(this->x, this->y);
-	return &pt;
+	Point* pt = new Point(this->x, this->y);
+	return pt;
 }

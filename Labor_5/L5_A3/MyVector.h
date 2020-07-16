@@ -6,9 +6,9 @@
 class MyVector
 {
 private:
-	MyVectorData** strPtr;
-	unsigned int strSize = 0;
-	unsigned int strCapacity = 0;
+	MyVectorData** mainPtr;
+	unsigned int size = 0;
+	unsigned int capacity = 0;
 
 public:
 	// Standardkonstruktor
@@ -25,9 +25,9 @@ public:
 	MyVector& append(const MyVector&);
 	// MyString zuweisen
 	
-	unsigned int size() const;
+	unsigned int getSize() const;
 	// Kapazität des Strings zurückgeben
-	unsigned int capacity() const;
+	unsigned int getCapacity() const;
 	// MyString leeren, d.h. auf leeren String setzen
 	void clear();
 	// prüfen, ob der String leer ist
@@ -51,7 +51,7 @@ public:
 	friend std::ostream& operator<< (std::ostream& os, const MyVector& rhs);
 
 	// Zuweisungsoperator
-	MyVector& operator= (const MyVector& rhs);
+	//MyVector& operator= (const MyVector& rhs);
 
 	// Zugriffsoperator
 	char& operator[](int val) const;*/
