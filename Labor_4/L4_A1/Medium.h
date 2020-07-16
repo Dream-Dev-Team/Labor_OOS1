@@ -38,6 +38,6 @@ public:
 	// das Mediuem "ausleihen", d.h. Person p, von und bis eintragen
 	void ausleihen(Person& p, Datum von, Datum bis);
 	// Medium in der Konsole ausgeben
-	void print() const;
+	virtual void print() const;
 };
 
