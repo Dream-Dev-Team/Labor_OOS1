@@ -123,6 +123,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="DrawingObject.cpp" />
+    <ClCompile Include="MyVector.cpp" />
+    <ClCompile Include="MyVectorData.cpp" />
+    <ClCompile Include="ObjCounter.cpp" />
+    <ClCompile Include="OneDimObject.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Quelle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="DrawingObject.h" />
+    <ClInclude Include="MyVector.h" />
+    <ClInclude Include="MyVectorData.h" />
+    <ClInclude Include="ObjCounter.h" />
+    <ClInclude Include="OneDimObject.h" />
+    <ClInclude Include="Point.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
