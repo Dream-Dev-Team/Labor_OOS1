@@ -18,7 +18,7 @@ int main() {
 	v1.at(2).print();
 
 	cout << endl << "2:" << endl;
-	v1.at(1) = v1.at(2);	//Does not work :( but atleast no ERROR  edit: existiert überhaupt ein = operator für die Pointklasse? xD 
+	v1.at(1) = v1.at(2);	
 
 	v1.printAll();
 

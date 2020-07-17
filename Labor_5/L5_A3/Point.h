@@ -38,4 +38,5 @@ public:
 	Point& operator++();
 	Point operator++(int i);
 	MyVectorData* clone() const;
+	Point& operator=(const MyVectorData& p);
 };

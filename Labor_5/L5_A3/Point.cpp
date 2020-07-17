@@ -128,3 +128,11 @@ MyVectorData* Point::clone() const {
 	Point* pt = new Point(this->x, this->y);
 	return pt;
 }
+
+Point& Point::operator=(const MyVectorData& p) {
+	const Point* ptr =
+		dynamic_cast<Point*>(const_cast<MyVectorData*>(&p));
+	x = ptr->x;
+	y = ptr->y;
+	return *this;
+}
