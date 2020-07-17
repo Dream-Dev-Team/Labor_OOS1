@@ -125,6 +125,8 @@
   <ItemGroup>
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="DrawingObject.cpp" />
+    <ClCompile Include="MyList.cpp" />
+    <ClCompile Include="MyListElement.cpp" />
     <ClCompile Include="MyVector.cpp" />
     <ClCompile Include="MyVectorData.cpp" />
     <ClCompile Include="ObjCounter.cpp" />
@@ -135,6 +137,8 @@
   <ItemGroup>
     <ClInclude Include="Circle.h" />
     <ClInclude Include="DrawingObject.h" />
+    <ClInclude Include="MyList.h" />
+    <ClInclude Include="MyListElement.h" />
     <ClInclude Include="MyVector.h" />
     <ClInclude Include="MyVectorData.h" />
     <ClInclude Include="ObjCounter.h" />

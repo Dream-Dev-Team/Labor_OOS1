@@ -13,15 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Headerdateien\Hausaufgabe">
+      <UniqueIdentifier>{9d456cb2-848a-4231-b06c-161fcfe997bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\Hausaufgabe">
+      <UniqueIdentifier>{f4ce5128-d5ac-464a-abf3-f397e5e6557b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Quelle.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="MyVector.cpp">
+    <ClCompile Include="MyVectorData.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="MyVectorData.cpp">
+    <ClCompile Include="MyList.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="MyVector.cpp">
+      <Filter>Quelldateien\Hausaufgabe</Filter>
+    </ClCompile>
+    <ClCompile Include="MyListElement.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Circle.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="DrawingObject.cpp">
@@ -33,14 +51,26 @@
     <ClCompile Include="OneDimObject.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Circle.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Point.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MyVectorData.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="MyList.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="MyVector.h">
+      <Filter>Headerdateien\Hausaufgabe</Filter>
+    </ClInclude>
+    <ClInclude Include="MyListElement.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Circle.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
     <ClInclude Include="DrawingObject.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -48,18 +78,6 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="OneDimObject.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Point.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="MyVectorData.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="MyVector.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Circle.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
