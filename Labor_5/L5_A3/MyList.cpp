@@ -28,7 +28,7 @@ void MyList::pop_back() {
 	while (ptr->next != this->last)
 		ptr = ptr->next;
 	ptr->next = nullptr;
-	delete this->last;
+	//delete this->last;
 	this->last = ptr;
 
 }

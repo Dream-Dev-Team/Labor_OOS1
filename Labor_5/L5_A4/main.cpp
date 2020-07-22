@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Circle.hpp"
-#include "Rectangle.h"
 #include "Polygonline.hpp"
 using namespace std;
 bool debugConstructor = false;
@@ -10,7 +9,6 @@ int main(void)
 	cout << "Anzahl der Objekte: " << DrawingObject::getNumber();
 	cout << endl;
 	Point p1;
-	Rectangle r1;
 	cout << "p1 ObjectId: " << p1.getID() << " " << p1 << endl;
 	Point p2(1, 1);
 	cout << "p2 ObjectId: " << p2.getID() << " " << p2 << endl;

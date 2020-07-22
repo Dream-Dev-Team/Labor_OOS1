@@ -123,6 +123,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Labor_4\L4_A4\Rectangle.h" />
+    <ClInclude Include="..\..\Labor_4\L4_A4\DrawingObject.h" />
+    <ClInclude Include="..\..\Labor_4\L4_A4\ObjCounter.h" />
+    <ClInclude Include="..\..\Labor_4\L4_A4\OneDimObject.h" />
+    <ClInclude Include="..\..\Labor_4\L4_A4\PlgElement.hpp" />
+    <ClInclude Include="..\..\Labor_4\L4_A4\Point.hpp" />
+    <ClInclude Include="..\..\Labor_4\L4_A4\Polygonline.hpp" />
+    <ClInclude Include="Circle.hpp" />
+    <ClInclude Include="Rectangle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Labor_4\L4_A4\ObjCounter.cpp" />
+    <ClCompile Include="..\..\Labor_4\L4_A4\PlgElement.cpp" />
+    <ClCompile Include="..\..\Labor_4\L4_A4\Point.cpp" />
+    <ClCompile Include="..\..\Labor_4\L4_A4\Polygonline.cpp" />
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Quelle.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
