@@ -123,6 +123,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bibliothek.cpp" />
+    <ClCompile Include="Buch.cpp" />
+    <ClCompile Include="Datum.cpp" />
+    <ClCompile Include="Dozent.cpp" />
+    <ClCompile Include="DVD.cpp" />
+    <ClCompile Include="main.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Medium.cpp" />
+    <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Student.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bibliothek.h" />
+    <ClInclude Include="Buch.h" />
+    <ClInclude Include="Datum.h" />
+    <ClInclude Include="Dozent.h" />
+    <ClInclude Include="DVD.h" />
+    <ClInclude Include="Medium.h" />
+    <ClInclude Include="Person.h" />
+    <ClInclude Include="Student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

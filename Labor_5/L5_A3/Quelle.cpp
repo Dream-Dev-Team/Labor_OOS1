@@ -21,7 +21,7 @@ int main() {
 	cout << "Liste v2 ausgeben ..." << endl;
 	v2.print();
 	cout << "Punkt am Beginn der Liste v2 verschieben ..." << endl;
-	//dynamic_cast<Point&>(v2.front()).move(10, 10);
+	dynamic_cast<Point&>(v2.front()).move(10, 10);
 	cout << "Liste v1 ausgeben ..." << endl;
 	v1.print();
 	cout << "Liste v2 ausgeben ..." << endl;
@@ -49,4 +49,7 @@ int main() {
 	Circle c1(p1, 1);
 	Circle c2(p2, 2);
 	MyList v3;
+	v3.push_back(c1);
+	v3.push_back(c2);
+	v3.print();
 }

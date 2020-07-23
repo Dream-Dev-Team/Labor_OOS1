@@ -1,17 +1,34 @@
 #include "MyList.h"
 #include "MyListElement.h"
 #include "MyVectorData.h"
+#include <iostream>
+
 MyList::MyList(){
 	
 }
 
 MyList::MyList(const MyList& l1) {
-	*this = l1;
+	this->first = new MyListElement();
+	this->first->data = l1.first->data->clone();
+
+	MyListElement* ptr = l1.first;
+	MyListElement* thisPtr = this->first;
+
+	while (ptr->next != nullptr) {
+		thisPtr->next = new MyListElement();
+		thisPtr->next->data = ptr->data->clone();
+
+		ptr = ptr->next;
+		thisPtr = thisPtr->next;
+	}
+	this->last = thisPtr;
+	this->last->data = ptr->data->clone();
 }
 
 void MyList::push_back(const MyVectorData& obj)
 {
 	if (this->empty()) {
+		std::cout << "EMPTY";
 		this->first = new MyListElement;
 		this->first->data = &obj;
 		this->last = this->first;
@@ -49,6 +66,7 @@ void MyList::clear() {
 		ptr = ptr->next;
 	}
 	this->last = nullptr;
+	this->first = nullptr;
 }
 
 bool MyList::empty() {
@@ -67,32 +85,42 @@ int MyList::size() {
 	return size;
 }
 
-MyList& MyList::operator=(const MyList& l1){
-	MyList l2;
-	l2.first = new MyListElement;
-	MyListElement* ptr2 = l2.first;
-	for (MyListElement* ptr1 = l1.first; ptr1 != l1.last; ptr1 = ptr1->next) {
-		ptr2->data = ptr1->data->clone();
-		ptr2->next = new MyListElement;
-		ptr2 = ptr2->next;
+MyList& MyList::operator=(const MyList& l2){
+	if (this != &l2) {
+		MyList* newList = new MyList(l2);
+		MyListElement* ptr = newList->first;
+		MyListElement* thisPtr = new MyListElement();
+		thisPtr->data = newList->first->data->clone();
+		this->first = thisPtr;
+
+		while (ptr->next != nullptr) {
+			thisPtr->next = new MyListElement();
+			thisPtr->next->data = ptr->data->clone();
+
+			ptr = ptr->next;
+			thisPtr = thisPtr->next;
+		}
+		this->last = thisPtr;
+		this->last->data = ptr->data->clone();
 	}
-	ptr2->data = l1.last->data->clone();
-	ptr2->next = nullptr;
-	l2.last = ptr2;
-	return l2;
+	return *this;
 }
 
 
-MyList MyList::operator+(const MyList& list) {
-	MyList l2 = *this; 
-	MyList l3 = list;
-	if (l2.last == nullptr)
-		l2.last = l3.first;
-	else{
-		l2.last->next = l3.first;
-		l2.last = l3.first;
+MyList MyList::operator+(const MyList& list2) {
+	MyList l1(*this); 
+	MyList l2(list2);
+	if (l1.empty()) {
+		return l2;
 	}
-	return l2;
+	else if (l2.empty()) {
+		return l1;
+	}
+	else{
+		l1.last->next = l2.first;
+		l1.last = l2.last;
+	}
+	return l1;
 }
 
 void MyList::print()const {
