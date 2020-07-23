@@ -123,6 +123,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Labor_4\L4_A4\PlgElement.cpp" />
+    <ClCompile Include="..\..\Labor_4\L4_A4\Point.cpp" />
+    <ClCompile Include="..\..\Labor_5\L5_A4\Circle.cpp" />
+    <ClCompile Include="..\..\Labor_5\L5_A4\Rectangle.cpp" />
+    <ClCompile Include="DrawingObject.cpp" />
+    <ClCompile Include="ObjCounter.cpp" />
+    <ClCompile Include="Polygonline.cpp" />
+    <ClCompile Include="Quelle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Labor_4\L4_A4\OneDimObject.h" />
+    <ClInclude Include="..\..\Labor_4\L4_A4\PlgElement.hpp" />
+    <ClInclude Include="..\..\Labor_4\L4_A4\Point.hpp" />
+    <ClInclude Include="..\..\Labor_5\L5_A4\Circle.hpp" />
+    <ClInclude Include="..\..\Labor_5\L5_A4\Rectangle.h" />
+    <ClInclude Include="DrawingObject.h" />
+    <ClInclude Include="ObjCounter.h" />
+    <ClInclude Include="Polygonline.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

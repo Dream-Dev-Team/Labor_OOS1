@@ -1,6 +1,5 @@
 #include "Point.hpp"
 #include <iostream>
-#include "DrawingObject.h"
 
 using namespace std;
 extern bool debugConstructor;
