@@ -5,13 +5,15 @@ using namespace std;
 bool debugConstructor = false;
 int main() {
 	// Punkt erstellen und Infos ausgeben
-	const Point p;
+	Point p;
 	cout << "maxId = " << ObjCounter::getMaxID() << endl;
 	cout << "ID von p = " << p.id << endl;
-	// ID von p unerlaubt ändern
-	*(((int*)(&p)) + 1) = ObjCounter::getMaxID() + 10;
+	cout << " ID von p unerlaubt ändern\n";
+	//*(((int*)(&p)) + 1) = ObjCounter::getMaxID() + 10;
+	p.id = ObjCounter::getMaxID() + 10;
 	// Punkt ausgeben
 	cout << "ID von p = " << p.id << endl;
+	p.check();
 	p.print();
 	// Polygonline erstellen und ausgeben
 	Polygonline pl;
@@ -20,10 +22,12 @@ int main() {
 	pl.addPoint(Point(3, 3));
 	pl.addPoint(Point(4, 4));
 	pl.print();
-	// Polygonline unerlaubt ändern
-	PlgElement* first = (PlgElement*)(*((int*)(&pl) + 2));
-	PlgElement* last = (PlgElement*)(*((int*)(&pl) + 3));
-	last->setNext(first);
+	cout << " Polygonline unerlaubt ändern\n";
+	//PlgElement* first = (PlgElement*)(*((int*)(&pl) + 2));
+	//PlgElement* last = (PlgElement*)(*((int*)(&pl) + 3));
+	//last->setNext(first);
+	pl.end->setNext(pl.start);
+
 	pl.print();
 	return 0;
 }

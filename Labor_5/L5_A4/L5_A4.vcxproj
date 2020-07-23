@@ -123,7 +123,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Labor_4\L4_A4\Rectangle.h" />
     <ClInclude Include="..\..\Labor_4\L4_A4\DrawingObject.h" />
     <ClInclude Include="..\..\Labor_4\L4_A4\ObjCounter.h" />
     <ClInclude Include="..\..\Labor_4\L4_A4\OneDimObject.h" />

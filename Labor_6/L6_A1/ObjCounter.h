@@ -3,7 +3,7 @@ class ObjCounter
 {
 private:
 	static int maxID;
-	static int number;	
+	static int number;
 public:
 	int id;
 

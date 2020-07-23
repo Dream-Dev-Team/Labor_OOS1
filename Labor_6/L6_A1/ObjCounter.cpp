@@ -1,4 +1,5 @@
 #include "ObjCounter.h"
+#include "DrawingObject.h"
 #include <iostream>
 using namespace::std;
 
@@ -15,7 +16,7 @@ ObjCounter::ObjCounter() {
 	if (debugConstructor) {
 		cout << "Konstruktor der Klasse ObjCounter, Objekt:" << this->getID() << endl;
 	}
-	
+
 }
 
 ObjCounter::~ObjCounter() {
@@ -26,7 +27,7 @@ ObjCounter::~ObjCounter() {
 	}
 }
 
-int ObjCounter::getID(){
+int ObjCounter::getID() {
 	return this->id;
 }
 
