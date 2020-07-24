@@ -1,29 +1,72 @@
 #include <iostream>
+#include <sstream>
+#include "Circle.hpp"
 #include "Polygonline.hpp"
-
+#include "Rectangle.h"
 using namespace std;
 bool debugConstructor = false;
-int main() {
-	// Punkt erstellen und Infos ausgeben
-	const Point p;
-	cout << "maxId = " << ObjCounter::getMaxID() << endl;
-	cout << "ID von p = " << p.id << endl;
-	// ID von p unerlaubt ändern
-	*(((int*)(&p)) + 1) = ObjCounter::getMaxID() + 10;
-	// Punkt ausgeben
-	cout << "ID von p = " << p.id << endl;
-	p.print();
-	// Polygonline erstellen und ausgeben
-	Polygonline pl;
-	pl.addPoint(Point(1, 1));
-	pl.addPoint(Point(2, 2));
-	pl.addPoint(Point(3, 3));
-	pl.addPoint(Point(4, 4));
-	pl.print();
-	// Polygonline unerlaubt ändern
-	PlgElement* first = (PlgElement*)(*((int*)(&pl) + 2));
-	PlgElement* last = (PlgElement*)(*((int*)(&pl) + 3));
-	last->setNext(first);
-	pl.print();
+
+//////////////////////////////////////////////////////
+//Dateiname: L5_A4
+//Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
+//Enthaltene Module: 
+//Entwicklungsbeginn: 23.07.2020		Entwicklungsende: 24.07.2020
+//Zeitaufwand gesamt: 
+//Letzte Modifikationen: 
+//////////////////////////////////////////////////////
+
+
+int main(void)
+{
+	DrawingObject* objects[20];
+	int anzahl = 0;
+	cout << "Wieviele Objekte wollen Sie einlesen?" << endl;	//Anzahl Einage
+	cout << "Anzahl: ";
+	cin >> anzahl;
+
+	for (int i = 0; i < anzahl; i++)
+	{
+		cout << ">>> ";
+		string in;
+		cin.clear();
+		getline(cin, in);
+		cin >> in;
+		DrawingObject* d = nullptr;
+		switch (in.c_str()[0])				//Obj Eingabe
+		{
+		case '(': {
+			d = new Point(in);
+			break;
+		}
+
+		case '<': {
+			d = new Circle(in);
+			break;
+		}
+
+		case '|': {
+			d = new Polygonline(in);
+			break;
+		}
+
+		case '[': {
+			d = new Rectangle(in);
+			break;
+		}
+
+		default:
+			cout << "Error 418:	I’m a teapot - '" << in << "'" << endl;
+		}
+		objects[i] = d;
+	}
+
+	//Ausgabe	
+	for (int i = 0; i < anzahl; i++)
+	{
+		if (objects[i])
+			objects[i]->print(true); // einzelnes Objekt ausgeben
+
+	}
+
 	return 0;
 }

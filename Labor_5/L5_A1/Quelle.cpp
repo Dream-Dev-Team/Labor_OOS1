@@ -1,5 +1,15 @@
 #include <iostream>
 #include <string>
+
+//////////////////////////////////////////////////////
+//Dateiname: L5_A1
+//Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
+//Enthaltene Module: 
+//Entwicklungsbeginn: 23.07.2020		Entwicklungsende: 24.07.2020
+//Zeitaufwand gesamt: 
+//Letzte Modifikationen: 
+//////////////////////////////////////////////////////
+
 using namespace std;
 void p(string s, bool nl = true) {
 	cout << s << " ";

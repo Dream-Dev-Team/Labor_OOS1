@@ -6,11 +6,12 @@
 #include "Student.h"
 #include "Dozent.h"
 using namespace std;
+
 //////////////////////////////////////////////////////
-//Dateiname: 
+//Dateiname: L5_A2
 //Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
 //Enthaltene Module: 
-//Entwicklungsbeginn: xx.xx.xx		Entwicklungsende: xx.xx.xx
+//Entwicklungsbeginn: 23.07.2020		Entwicklungsende: 24.07.2020
 //Zeitaufwand gesamt: 
 //Letzte Modifikationen: 
 //////////////////////////////////////////////////////

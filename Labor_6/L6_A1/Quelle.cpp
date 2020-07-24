@@ -1,6 +1,15 @@
 #include <iostream>
 #include "Polygonline.hpp"
 
+//////////////////////////////////////////////////////
+//Dateiname: L6_A1
+//Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
+//Enthaltene Module: 
+//Entwicklungsbeginn: 23.07.2020		Entwicklungsende: 24.07.2020
+//Zeitaufwand gesamt: 
+//Letzte Modifikationen: 
+//////////////////////////////////////////////////////
+
 using namespace std;
 bool debugConstructor = false;
 int main() {

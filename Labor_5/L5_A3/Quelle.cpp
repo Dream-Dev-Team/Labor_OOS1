@@ -1,9 +1,18 @@
 #include <iostream>
 #include "MyList.h"
-
 #include "Circle.h"
 bool debugConstructor = false;
 using namespace std;
+
+//////////////////////////////////////////////////////
+//Dateiname: L5_A3 
+//Autoren: Maxim Becht (mabeit10@hs-esslingen.de), Aaron Müller (aamuit00@hs-esslingen.de)
+//Enthaltene Module: 
+//Entwicklungsbeginn: 23.07.2020		Entwicklungsende: 24.07.2020
+//Zeitaufwand gesamt: 
+//Letzte Modifikationen: 
+//////////////////////////////////////////////////////
+
 int main() {
 	Point p1(1, 1);
 	Point p2(2, 2);
@@ -21,7 +30,7 @@ int main() {
 	cout << "Liste v2 ausgeben ..." << endl;
 	v2.print();
 	cout << "Punkt am Beginn der Liste v2 verschieben ..." << endl;
-	dynamic_cast<Point&>(v2.front()).move(10, 10);
+	//dynamic_cast<Point&>(v2.front()).move(10, 10);
 	cout << "Liste v1 ausgeben ..." << endl;
 	v1.print();
 	cout << "Liste v2 ausgeben ..." << endl;
